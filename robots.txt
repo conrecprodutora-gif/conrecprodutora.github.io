@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://conrec.com.br/sitemap.xml
