@@ -1,0 +1,1057 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Vértice Planejados</title>
+<meta name="description" content="Móveis planejados em Passo Fundo. Monte a sua cozinha, closet ou home office e receba o orçamento do projeto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --papel:#F4F0EA; --papel-2:#EAE4DA; --papel-3:#E0D8CC; --linha:#D6CCBE; --linha-2:rgba(31,28,25,.12);
+  --tinta:#1F1C19; --tinta-2:#5A534B; --suave:#8B8279;
+  --acento:#2E3B33; --acento-2:#3C4D43; --madeira:#9A6B45; --latao:#B38B4D;
+  --noite:#161412; --noite-2:#201D1A; --noite-linha:rgba(244,240,234,.14);
+  --serif:'Instrument Serif',Georgia,'Times New Roman',serif; --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --ease:cubic-bezier(.2,.8,.2,1); --ease-io:cubic-bezier(.77,0,.18,1);
+  --g:clamp(16px,4vw,48px);
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--papel);color:var(--tinta);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--madeira);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--g)}
+.eyebrow{font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--madeira)}
+h1,h2,h3.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;line-height:1}
+h2{font-size:clamp(40px,5.4vw,76px)}
+h2 em,h1 em{font-style:italic}
+.lead{font-size:clamp(16px,1.3vw,18px);color:var(--tinta-2);max-width:46ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:15px 24px;font-weight:500;font-size:15px;text-decoration:none;transition:background .3s,color .3s,border-color .3s,transform .3s var(--ease);white-space:nowrap}
+.btn svg{width:16px;height:16px;transition:transform .3s var(--ease)}
+.btn:hover svg{transform:translateX(3px)}
+.btn.claro{background:var(--papel);color:var(--tinta)}
+.btn.claro:hover{background:#fff}
+.btn.linha{border:1px solid rgba(244,240,234,.45);color:var(--papel)}
+.btn.linha:hover{border-color:var(--papel);background:rgba(244,240,234,.08)}
+.btn.escuro{background:var(--acento);color:var(--papel)}
+.btn.escuro:hover{background:var(--acento-2)}
+.btn.contorno{border:1px solid var(--linha);color:var(--tinta)}
+.btn.contorno:hover{border-color:var(--tinta-2)}
+
+/* ---------- topo ---------- */
+.topo{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .4s,color .4s,border-color .4s,transform .4s var(--ease);color:var(--papel);border-bottom:1px solid transparent}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.topo.solido{background:rgba(244,240,234,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:var(--tinta);border-color:var(--linha-2)}
+.topo.esconde{transform:translateY(-100%)}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none;white-space:nowrap}
+.marca svg{width:28px;height:28px;flex:none}
+.marca b{font-family:var(--serif);font-weight:400;font-size:26px;letter-spacing:-.01em;line-height:1}
+.marca small{display:block;font-size:11px;letter-spacing:.06em;opacity:.7;margin-top:2px}
+.topo nav{display:flex;gap:30px;font-size:14px}
+.topo nav a{text-decoration:none;opacity:.82;transition:opacity .2s}
+.topo nav a:hover{opacity:1}
+.topo .cta{padding:11px 18px;font-size:14px;border:1px solid currentColor;border-radius:999px;text-decoration:none;white-space:nowrap;transition:background .3s,color .3s}
+.topo .cta:hover{background:currentColor}
+.topo .cta:hover span{color:var(--tinta)}
+.topo.solido .cta:hover span{color:var(--papel)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:100svh;min-height:640px;overflow:hidden;background:var(--noite);color:var(--papel)}
+.hero .foto{position:absolute;inset:0}
+.hero .foto img{width:100%;height:100%;object-fit:cover;object-position:62% 50%;transform:scale(1.12);animation:respira 18s var(--ease) forwards}
+@keyframes respira{to{transform:scale(1.0)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,13,11,.55) 0%,rgba(15,13,11,0) 26%,rgba(15,13,11,0) 44%,rgba(15,13,11,.78) 100%),linear-gradient(90deg,rgba(15,13,11,.55),rgba(15,13,11,0) 60%)}
+.hero .conteudo{position:absolute;left:0;right:0;bottom:0;z-index:2;padding-bottom:clamp(28px,6vh,64px)}
+.hero .conteudo .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end}
+.hero h1{font-size:clamp(52px,8.6vw,138px);line-height:.92;letter-spacing:-.025em;max-width:11ch}
+.hero h1 .l{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .l>span{display:inline-block}
+.hero .eyebrow{color:#D9B98C;margin-bottom:22px;display:block}
+.hero p{margin-top:24px;max-width:40ch;color:rgba(244,240,234,.82);font-size:clamp(16px,1.3vw,18px)}
+.hero .acoes{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.hero .ficha{display:flex;flex-direction:column;gap:6px;font-size:13px;color:rgba(244,240,234,.7);text-align:right;padding-bottom:6px}
+.hero .ficha b{font-weight:500;color:var(--papel)}
+.rolar{position:absolute;left:50%;bottom:22px;z-index:2;transform:translateX(-50%);width:1px;height:46px;background:rgba(244,240,234,.25);overflow:hidden}
+.rolar::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:var(--papel);animation:desce 2.2s var(--ease-io) infinite}
+@keyframes desce{to{top:110%}}
+
+/* ---------- intro ---------- */
+.intro{padding:clamp(80px,12vw,160px) 0 clamp(60px,8vw,110px)}
+.intro .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(32px,6vw,96px);align-items:start}
+.intro h2{font-size:clamp(38px,4.6vw,66px)}
+.intro .colunas{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px;margin-top:8px}
+.intro .colunas div{border-top:1px solid var(--linha);padding-top:18px}
+.intro .colunas b{display:block;font-weight:500;margin-bottom:6px}
+.intro .colunas p{color:var(--tinta-2);font-size:15px}
+
+/* ---------- do projeto à realidade ---------- */
+.esboco{position:relative;background:var(--papel)}
+.esboco .pin{height:100svh;min-height:600px;display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:clamp(24px,4vw,64px);align-items:center;padding:0 var(--g);max-width:1600px;margin:0 auto}
+.esboco .texto h2{font-size:clamp(40px,4.4vw,68px)}
+.esboco .passos{margin-top:30px;display:flex;flex-direction:column;gap:2px;border-left:1px solid var(--linha)}
+.esboco .passos li{list-style:none;padding:10px 0 10px 18px;color:var(--suave);font-size:15px;position:relative;transition:color .4s}
+.esboco .passos li::before{content:"";position:absolute;left:-1px;top:0;bottom:0;width:2px;background:var(--madeira);transform:scaleY(0);transform-origin:top;transition:transform .5s var(--ease)}
+.esboco .passos li.on{color:var(--tinta)}
+.esboco .passos li.on::before{transform:scaleY(1)}
+.esboco .quadro{position:relative;aspect-ratio:2000/1349;border-radius:6px;overflow:hidden;background:#FBF9F5;box-shadow:0 40px 80px -50px rgba(31,28,25,.45)}
+.esboco .quadro img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:inset(0 100% 0 0)}
+.esboco .quadro svg{position:absolute;inset:0;width:100%;height:100%}
+.esboco .papelgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(154,107,69,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(154,107,69,.08) 1px,transparent 1px);background-size:40px 40px}
+.esboco .tr{fill:none;stroke:#3A2E25;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.esboco .tr.fino{stroke-width:1;stroke:#6B5B4E}
+.esboco .cota{fill:none;stroke:#9A6B45;stroke-width:1;vector-effect:non-scaling-stroke}
+.esboco .cotat{font-family:var(--sans);font-size:30px;fill:#9A6B45}
+.esboco .selo{position:absolute;right:14px;bottom:14px;background:rgba(244,240,234,.92);border:1px solid var(--linha);border-radius:999px;padding:6px 12px;font-size:12px;color:var(--tinta-2)}
+
+/* ---------- configurador ---------- */
+.monte{padding:clamp(80px,10vw,140px) 0;background:var(--papel-2);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+.monte .cab{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:end;margin-bottom:34px}
+.abas{display:inline-flex;background:var(--papel);border:1px solid var(--linha);border-radius:999px;padding:4px;gap:2px}
+.abas button{padding:10px 18px;border-radius:999px;font-size:14px;color:var(--tinta-2);transition:background .3s,color .3s;white-space:nowrap}
+.abas button[aria-selected="true"]{background:var(--tinta);color:var(--papel)}
+.cfg{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:20px;align-items:start}
+.palco{position:sticky;top:96px;border-radius:14px;overflow:hidden;background:#E7E0D5;border:1px solid var(--linha);box-shadow:0 30px 60px -45px rgba(31,28,25,.5)}
+.palco svg{display:block;width:100%;height:auto}
+.palco .vista{display:none}.palco .vista.on{display:block}
+.palco .rotulo{position:absolute;left:14px;top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.palco .rotulo span{background:rgba(244,240,234,.9);border:1px solid var(--linha);border-radius:999px;padding:5px 11px;font-size:12px;color:var(--tinta-2);backdrop-filter:blur(6px)}
+.diaNoite{position:absolute;right:14px;top:14px;display:flex;background:rgba(244,240,234,.9);border:1px solid var(--linha);border-radius:999px;padding:3px;backdrop-filter:blur(6px)}
+.diaNoite button{display:flex;align-items:center;gap:6px;padding:6px 11px;border-radius:999px;font-size:12px;color:var(--tinta-2);transition:background .3s,color .3s}
+.diaNoite button svg{width:14px;height:14px}
+.diaNoite button[aria-pressed="true"]{background:var(--tinta);color:var(--papel)}
+.painel{background:var(--papel);border:1px solid var(--linha);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:20px}
+.painel .grupo h3{font-size:13px;font-weight:600;margin-bottom:10px;display:flex;justify-content:space-between;gap:10px}
+.painel .grupo h3 span{font-weight:400;color:var(--suave);text-align:right}
+.amostras{display:grid;grid-template-columns:repeat(auto-fill,minmax(36px,1fr));gap:8px}
+.amostras button{aspect-ratio:1;border-radius:50%;border:1px solid rgba(0,0,0,.14);position:relative;background-size:cover;background-position:center;transition:transform .25s var(--ease)}
+.amostras button:hover{transform:scale(1.08)}
+.amostras button[aria-pressed="true"]::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1.5px solid var(--tinta)}
+.opcoes{display:flex;flex-wrap:wrap;gap:6px}
+.opcoes button{border:1px solid var(--linha);border-radius:999px;padding:8px 13px;font-size:13px;color:var(--tinta-2);transition:background .25s,color .25s,border-color .25s}
+.opcoes button:hover{border-color:var(--tinta-2)}
+.opcoes button[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--papel)}
+.chave{display:flex;align-items:center;justify-content:space-between;font-size:14px;gap:12px}
+.chave button{width:46px;height:26px;border-radius:999px;background:var(--papel-3);position:relative;transition:background .3s;flex:none}
+.chave button::after{content:"";position:absolute;left:3px;top:3px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.2);transition:transform .3s var(--ease)}
+.chave button[aria-pressed="true"]{background:var(--acento)}
+.chave button[aria-pressed="true"]::after{transform:translateX(20px)}
+.grupos{display:none;flex-direction:column;gap:20px}.grupos.on{display:flex}
+.resumo{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;background:var(--noite);color:var(--papel);border-radius:14px;padding:24px 28px}
+.resumo dl{display:flex;flex-wrap:wrap;gap:8px 26px;font-size:13px}
+.resumo dt{color:rgba(244,240,234,.55)}
+.resumo dd{font-weight:500}
+.resumo .lado{display:flex;align-items:center;gap:24px}
+.resumo small{display:block;font-size:12px;color:rgba(244,240,234,.55)}
+.resumo b.valor{font-family:var(--serif);font-weight:400;font-size:34px;line-height:1.1;white-space:nowrap;font-variant-numeric:tabular-nums}
+.svgk .t{transition:fill .6s var(--ease),opacity .6s var(--ease),stroke .6s var(--ease)}
+.svgk .noite{transition:opacity .9s var(--ease)}
+
+/* ---------- projetos ---------- */
+.projetos{padding:clamp(80px,10vw,140px) 0 0;background:var(--noite);color:var(--papel);overflow:hidden}
+.projetos .cab{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:end;margin-bottom:44px}
+.projetos .lead{color:rgba(244,240,234,.7)}
+.projetos .eyebrow{color:#D9B98C}
+.trilho{display:flex;align-items:flex-start;gap:20px;padding:0 var(--g) clamp(80px,10vw,140px);width:max-content}
+.card{position:relative;display:block;flex:none;width:clamp(280px,34vw,520px);text-align:left;color:inherit}
+.card.alto{width:clamp(240px,24vw,380px)}
+.card .img{position:relative;overflow:hidden;border-radius:6px;aspect-ratio:4/3;background:#2a2622}
+.card.alto .img{aspect-ratio:3/4}
+.card img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 1.2s var(--ease)}
+.card:hover img{transform:scale(1.0)}
+.card .legenda{display:flex;flex-direction:column;gap:2px;margin-top:14px;font-size:14px}
+.card .legenda b{font-weight:500}
+.card .legenda span{color:rgba(244,240,234,.55)}
+.card .abrir{position:absolute;right:12px;top:12px;width:40px;height:40px;border-radius:50%;background:rgba(244,240,234,.92);color:var(--tinta);display:grid;place-items:center;opacity:0;transform:scale(.8);transition:opacity .3s,transform .3s var(--ease)}
+.card:hover .abrir,.card:focus-visible .abrir{opacity:1;transform:scale(1)}
+.card .abrir svg{width:16px;height:16px}
+.nota-img{font-size:12px;color:rgba(244,240,234,.45);margin-top:10px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(14,12,10,.94);display:grid;grid-template-rows:auto 1fr auto;opacity:0;pointer-events:none;transition:opacity .4s var(--ease);color:var(--papel)}
+.lb.on{opacity:1;pointer-events:auto}
+.lb .barra{display:flex;justify-content:space-between;align-items:center;padding:16px var(--g);font-size:14px;color:rgba(244,240,234,.7)}
+.lb .fechar{width:44px;height:44px;border-radius:50%;border:1px solid rgba(244,240,234,.3);display:grid;place-items:center}
+.lb .fechar svg{width:18px;height:18px}
+.lb figure{position:relative;display:grid;place-items:center;padding:0 var(--g);min-height:0}
+.lb figure img{max-width:100%;max-height:100%;object-fit:contain;border-radius:4px;transition:opacity .35s var(--ease),transform .5s var(--ease)}
+.lb figure img.saindo{opacity:0;transform:scale(.985)}
+.lb .rodape{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px var(--g) 24px}
+.lb .rodape b{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.1}
+.lb .rodape p{font-size:14px;color:rgba(244,240,234,.65)}
+.lb .navs{display:flex;gap:8px}
+.lb .navs button{width:48px;height:48px;border-radius:50%;border:1px solid rgba(244,240,234,.3);display:grid;place-items:center;transition:border-color .2s}
+.lb .navs button:hover{border-color:var(--papel)}
+.lb .navs svg{width:18px;height:18px}
+
+/* ---------- materiais ---------- */
+.materiais{padding:clamp(80px,10vw,140px) 0}
+.materiais .cab{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:end;margin-bottom:44px}
+.mats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.mat{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:3/4;background-size:cover;background-position:center;cursor:default;isolation:isolate}
+.mat::before{content:"";position:absolute;inset:0;background:inherit;background-size:cover;background-position:center;transition:transform 1.4s var(--ease);z-index:-1}
+.mat:hover::before{transform:scale(1.18)}
+.mat .info{position:absolute;left:0;right:0;bottom:0;padding:16px;background:linear-gradient(0deg,rgba(15,13,11,.72),rgba(15,13,11,0));color:var(--papel)}
+.mat .info b{font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.05;display:block}
+.mat .info span{font-size:13px;color:rgba(244,240,234,.8);display:block;max-height:0;overflow:hidden;transition:max-height .5s var(--ease),margin .5s var(--ease)}
+.mat:hover .info span,.mat:focus .info span{max-height:80px;margin-top:6px}
+.cores{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;align-items:center;font-size:13px;color:var(--tinta-2)}
+.cores i{width:26px;height:26px;border-radius:50%;border:1px solid rgba(0,0,0,.12);display:inline-block}
+
+/* ---------- processo ---------- */
+.processo{padding:clamp(80px,10vw,140px) 0;background:var(--papel-2);border-top:1px solid var(--linha)}
+.processo .cab{margin-bottom:56px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:end}
+.linha-tempo{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.linha-tempo .trilha{position:absolute;left:0;right:0;top:12px;height:1px;background:var(--linha)}
+.linha-tempo .trilha i{position:absolute;inset:0;background:var(--madeira);transform:scaleX(0);transform-origin:left}
+.etapa{position:relative;padding-top:44px}
+.etapa::before{content:"";position:absolute;left:0;top:6px;width:13px;height:13px;border-radius:50%;background:var(--papel-2);border:1.5px solid var(--madeira)}
+.etapa .num{font-family:var(--serif);font-size:20px;color:var(--madeira)}
+.etapa h3{font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.4vw,36px);line-height:1.05;margin:6px 0 10px}
+.etapa p{color:var(--tinta-2);font-size:15px}
+.etapa .ft{margin-top:20px;border-radius:6px;overflow:hidden;aspect-ratio:4/3}
+.etapa .ft img{width:100%;height:100%;object-fit:cover}
+.etapa .prazo{display:inline-block;margin-top:12px;font-size:12px;color:var(--suave);border:1px solid var(--linha);border-radius:999px;padding:4px 10px}
+
+/* ---------- ambientes + contato ---------- */
+.contato{position:relative;background:var(--noite);color:var(--papel);overflow:hidden}
+.contato .fundo{position:absolute;inset:0}
+.contato .fundo img{width:100%;height:100%;object-fit:cover;opacity:.35}
+.contato .fundo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,20,18,.96) 30%,rgba(22,20,18,.5))}
+.contato .wrap{position:relative;padding-top:clamp(80px,10vw,150px);padding-bottom:clamp(80px,10vw,150px);display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(32px,6vw,96px);align-items:end}
+.contato h2{font-size:clamp(44px,6vw,92px)}
+.contato .lead{color:rgba(244,240,234,.75);margin-top:20px}
+.contato .acoes{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.contato dl{display:grid;gap:18px;font-size:15px}
+.contato dt{font-size:12px;letter-spacing:.04em;color:rgba(244,240,234,.55);margin-bottom:2px}
+.contato .amb{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.contato .amb span{border:1px solid var(--noite-linha);border-radius:999px;padding:6px 12px;font-size:13px;color:rgba(244,240,234,.85)}
+footer{background:var(--noite);color:rgba(244,240,234,.55);font-size:12px;border-top:1px solid var(--noite-linha)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 30px;padding-top:22px;padding-bottom:28px}
+footer .creditos{max-width:80ch}
+
+/* ---------- responsivo ---------- */
+@media (max-width:1080px){
+  .cfg{grid-template-columns:1fr}
+  .palco{position:relative;top:0}
+  .mats{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .linha-tempo{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:48px}
+  .linha-tempo .trilha{display:none}
+}
+@media (max-width:860px){
+  .topo nav{display:none}
+  .hero .conteudo .wrap{grid-template-columns:1fr}
+  .hero .ficha{display:none}
+  .intro .wrap,.materiais .cab,.processo .cab,.contato .wrap{grid-template-columns:1fr}
+  .intro .colunas{grid-template-columns:1fr}
+  .esboco .pin{grid-template-columns:1fr;height:auto;min-height:0;padding-top:80px;padding-bottom:80px;gap:28px;align-content:start}
+  .monte .cab,.projetos .cab{grid-template-columns:1fr}
+  .resumo{grid-template-columns:1fr}
+  .resumo .lado{justify-content:space-between;flex-wrap:wrap}
+  .trilho{overflow-x:auto;width:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .trilho::-webkit-scrollbar{display:none}
+  .card{scroll-snap-align:start;width:78vw}
+  .card.alto{width:62vw}
+  .card .abrir{opacity:1;transform:none}
+  .lb .rodape{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:560px){
+  .topo .wrap{height:64px}
+  .marca b{font-size:23px}.marca small{display:none}
+  .topo .cta{padding:9px 14px;font-size:13px}
+  .hero .acoes .btn{flex:1 1 auto}
+  .mats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .linha-tempo{grid-template-columns:1fr}
+  .abas{display:flex;width:100%}.abas button{flex:1;padding:10px 8px}
+  .painel{padding:18px}
+  .diaNoite button span{display:none}
+  .resumo{padding:20px}
+  .resumo .lado .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .hero .foto img{transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="topo" id="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Vértice Planejados, início">
+      <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M2 4h8.4L14 17.6 17.6 4H26L17.4 25h-6.8z" fill="currentColor"/></svg>
+      <span><b>Vértice</b><small>Móveis planejados</small></span>
+    </a>
+    <nav aria-label="Seções">
+      <a href="#projeto">Do projeto à realidade</a>
+      <a href="#monte">Monte o seu</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#materiais">Materiais</a>
+      <a href="#processo">Como trabalhamos</a>
+    </nav>
+    <a class="cta" href="#contato"><span>Falar com a gente</span></a>
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- HERO -->
+  <section class="hero" aria-label="Apresentação">
+    <div class="foto"><img src="img/cozinha-hero.webp" alt="Cozinha integrada com armários em preto e madeira, tampo de mármore e mesa de jantar" fetchpriority="high"></div>
+    <div class="conteudo">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow">Móveis planejados em Passo Fundo</span>
+          <h1><span class="l"><span>Feito sob</span></span><span class="l"><span>medida para</span></span><span class="l"><span><em>o seu jeito</em></span></span><span class="l"><span>de viver.</span></span></h1>
+          <p>Cozinhas, closets, dormitórios e home offices desenhados para a sua planta, produzidos na nossa fábrica e montados pela nossa equipe.</p>
+          <div class="acoes">
+            <a class="btn claro" href="#monte">Montar minha cozinha <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+            <a class="btn linha" href="#projetos">Ver projetos</a>
+          </div>
+        </div>
+        <div class="ficha" aria-hidden="true">
+          <span>Na foto</span>
+          <b>Cozinha integrada</b>
+          <span>Preto texturizado e carvalho</span>
+          <span>Tampo e revestimento em mármore</span>
+        </div>
+      </div>
+    </div>
+    <div class="rolar" aria-hidden="true"></div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro" aria-labelledby="t-intro">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Vértice Planejados</span>
+        <h2 id="t-intro" style="margin-top:14px">Cada centímetro pensado para a <em>sua</em> casa.</h2>
+      </div>
+      <div>
+        <p class="lead">Medimos o ambiente, desenhamos em 3D, aprovamos cada detalhe com você e só então cortamos a primeira chapa. O resultado é um móvel que encaixa na parede, na rotina e no orçamento combinado.</p>
+        <div class="colunas" style="margin-top:36px">
+          <div><b>Projeto antes da obra</b><p>Você vê o ambiente pronto em 3D e ajusta cores, puxadores e divisões antes da produção.</p></div>
+          <div><b>Fábrica própria</b><p>Corte, fita de borda e furação feitos aqui, com acompanhamento de cada peça.</p></div>
+          <div><b>Montagem pela equipe</b><p>Os mesmos montadores do começo ao fim, com proteção do piso e limpeza no final.</p></div>
+          <div><b>Ferragens de linha</b><p>Corrediças com amortecimento, dobradiças com fechamento suave e perfis de LED embutidos.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DO PROJETO À REALIDADE -->
+  <section class="esboco" id="projeto" aria-labelledby="t-esboco">
+    <div class="pin">
+      <div class="texto">
+        <span class="eyebrow">Do projeto à realidade</span>
+        <h2 id="t-esboco" style="margin-top:14px">Primeiro o traço. <em>Depois a casa.</em></h2>
+        <p class="lead" style="margin-top:20px">Role a página e veja o desenho técnico virar o ambiente entregue.</p>
+        <ol class="passos" id="passosEsboco">
+          <li>Levantamento das paredes e alturas</li>
+          <li>Desenho dos módulos e cotas</li>
+          <li>Mobiliário e iluminação</li>
+          <li>Ambiente entregue</li>
+        </ol>
+      </div>
+      <div class="quadro" id="quadro">
+        <div class="papelgrid" aria-hidden="true"></div>
+        <svg viewBox="0 0 2000 1349" preserveAspectRatio="xMidYMid slice" aria-hidden="true" id="traco">
+          <g id="tr1">
+            <path class="tr" d="M0 240H2000"/>
+            <path class="tr" d="M0 1010H2000"/>
+            <path class="tr" d="M375 240V1010"/>
+            <path class="tr fino" d="M190 120V1010M100 120V1010"/>
+          </g>
+          <g id="tr2">
+            <path class="tr" d="M1076 365H2000M1076 600H2000M1076 365V1010"/>
+            <path class="tr fino" d="M1240 365V600M1530 365V600M1700 365V600M1860 365V600"/>
+            <path class="tr" d="M1076 768H2000M1076 782H2000"/>
+            <path class="tr fino" d="M1300 782V1000M1550 782V1000M1700 782V1000M1890 782V1000M1076 1000H2000"/>
+            <path class="tr" d="M555 355H900V1000H555Z"/>
+            <path class="tr fino" d="M590 355V1000M625 355V1000M660 355V1000M695 355V1000M730 355V1000M765 355V1000M800 355V1000M835 355V1000M870 355V1000"/>
+            <path class="tr" d="M900 555H1070V760H900Z"/>
+            <path class="tr fino" d="M900 680H1070M915 590H1055V665H915Z"/>
+            <path class="tr" d="M195 510H370V1010"/>
+            <path class="tr fino" d="M195 560H370M195 640H370M195 720H370M195 800H370"/>
+            <path class="cota" d="M1076 300H2000M1076 285V315M2000 285V315"/>
+            <text class="cotat" x="1480" y="290">3,20 m</text>
+            <path class="cota" d="M2040 365V1010"/>
+            <path class="cota" d="M555 1060H900M555 1045V1075M900 1045V1075"/>
+            <text class="cotat" x="660" y="1105">painel ripado</text>
+          </g>
+          <g id="tr3">
+            <path class="tr" d="M905 82H1280V96H905Z"/>
+            <path class="tr fino" d="M925 96V450M1265 96V520"/>
+            <circle class="tr" cx="920" cy="540" r="88"/>
+            <path class="tr" d="M1000 512H1180V536H1000Z"/>
+            <path class="tr" d="M555 862C600 845 1400 845 1445 862C1430 885 570 885 555 862Z"/>
+            <path class="tr fino" d="M680 884L700 1170M1320 884L1300 1170M720 884L760 1150M1280 884L1240 1150"/>
+            <path class="tr" d="M432 870C430 835 470 830 520 832C590 834 610 845 606 880L600 990H440Z"/>
+            <path class="tr" d="M735 900C735 865 770 862 840 862C920 862 950 870 948 905L940 1045H745Z"/>
+            <path class="tr" d="M1052 905C1050 870 1080 862 1160 862C1230 862 1268 868 1266 900L1260 1045H1060Z"/>
+            <path class="tr" d="M1392 880C1390 845 1410 832 1480 832C1540 832 1570 838 1568 870L1560 990H1400Z"/>
+            <path class="tr fino" d="M830 812C830 806 960 806 960 812V850M1080 812C1080 806 1210 806 1210 812V850"/>
+            <path class="tr fino" d="M750 1045L740 1235M935 1045L945 1235M1065 1045L1055 1235M1255 1045L1265 1235M445 990L430 1170M598 990L612 1170M1405 990L1390 1170M1555 990L1570 1170"/>
+          </g>
+        </svg>
+        <img src="img/cozinha-hero.webp" alt="O mesmo ambiente pronto: cozinha integrada com mesa de jantar" id="fotoReal" loading="lazy">
+        <span class="selo" id="seloEsboco">Desenho técnico</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFIGURADOR -->
+  <section class="monte" id="monte" aria-labelledby="t-monte">
+    <div class="wrap">
+      <div class="cab">
+        <div>
+          <span class="eyebrow">Monte o seu</span>
+          <h2 id="t-monte" style="margin-top:14px">Escolha os acabamentos <em>e veja na hora.</em></h2>
+          <p class="lead" style="margin-top:16px">Os materiais são os mesmos da nossa linha. Quando gostar da combinação, mande para a gente e o projeto começa dela.</p>
+        </div>
+        <div class="abas" role="tablist" aria-label="Ambiente">
+          <button role="tab" aria-selected="true" data-aba="coz">Cozinha</button>
+          <button role="tab" aria-selected="false" data-aba="clo">Closet</button>
+          <button role="tab" aria-selected="false" data-aba="esc">Home office</button>
+        </div>
+      </div>
+
+      <div class="cfg">
+        <div class="palco" id="palco">
+          <!-- COZINHA -->
+          <svg class="vista svgk on" id="svCoz" viewBox="0 0 1200 760" role="img" aria-label="Ilustração da cozinha com os acabamentos escolhidos"></svg>
+          <!-- CLOSET -->
+          <svg class="vista svgk" id="svClo" viewBox="0 0 1200 760" role="img" aria-label="Ilustração do closet com os acabamentos escolhidos"></svg>
+          <!-- HOME OFFICE -->
+          <svg class="vista svgk" id="svEsc" viewBox="0 0 1200 760" role="img" aria-label="Ilustração do home office com os acabamentos escolhidos"></svg>
+          <div class="rotulo" aria-hidden="true"><span id="rotuloAmb">Cozinha com ilha</span></div>
+          <div class="diaNoite" role="group" aria-label="Iluminação do ambiente">
+            <button aria-pressed="true" data-luz="dia"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3 3l1.4 1.4M11.6 11.6L13 13M3 13l1.4-1.4M11.6 4.4L13 3"/></svg><span>Dia</span></button>
+            <button aria-pressed="false" data-luz="noite"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M13 10.5A6 6 0 0 1 5.5 3a6 6 0 1 0 7.5 7.5z"/></svg><span>Noite</span></button>
+          </div>
+        </div>
+
+        <div class="painel" id="painel">
+          <div class="grupos on" data-grupos="coz">
+            <div class="grupo"><h3>Armários superiores <span data-nome="supC"></span></h3><div class="amostras" data-mat="supC"></div></div>
+            <div class="grupo"><h3>Inferiores, torres e ilha <span data-nome="infC"></span></h3><div class="amostras" data-mat="infC"></div></div>
+            <div class="grupo"><h3>Tampo <span data-nome="tampo"></span></h3><div class="opcoes" data-op="tampo"></div></div>
+            <div class="grupo"><h3>Revestimento <span data-nome="rev"></span></h3><div class="opcoes" data-op="rev"></div></div>
+            <div class="grupo"><h3>Puxador <span data-nome="pux"></span></h3><div class="opcoes" data-op="pux"></div></div>
+            <div class="chave"><span>Fita de LED sob os armários</span><button aria-pressed="true" aria-label="Fita de LED sob os armários" data-ch="ledC"></button></div>
+          </div>
+          <div class="grupos" data-grupos="clo">
+            <div class="grupo"><h3>Estrutura <span data-nome="estL"></span></h3><div class="amostras" data-mat="estL"></div></div>
+            <div class="grupo"><h3>Fundo dos nichos <span data-nome="fundoL"></span></h3><div class="amostras" data-mat="fundoL"></div></div>
+            <div class="grupo"><h3>Portas <span data-nome="portaL"></span></h3><div class="opcoes" data-op="portaL"></div></div>
+            <div class="grupo"><h3>Gavetas <span data-nome="gavL"></span></h3><div class="amostras" data-mat="gavL"></div></div>
+            <div class="chave"><span>Perfis de LED nos nichos</span><button aria-pressed="true" aria-label="Perfis de LED nos nichos" data-ch="ledL"></button></div>
+          </div>
+          <div class="grupos" data-grupos="esc">
+            <div class="grupo"><h3>Painel ripado <span data-nome="ripE"></span></h3><div class="amostras" data-mat="ripE"></div></div>
+            <div class="grupo"><h3>Tampo da mesa <span data-nome="mesaE"></span></h3><div class="amostras" data-mat="mesaE"></div></div>
+            <div class="grupo"><h3>Estante e armário <span data-nome="armE"></span></h3><div class="amostras" data-mat="armE"></div></div>
+            <div class="chave"><span>LED atrás do painel</span><button aria-pressed="true" aria-label="LED atrás do painel" data-ch="ledE"></button></div>
+          </div>
+        </div>
+
+        <div class="resumo" aria-live="polite">
+          <dl id="resumoLista"></dl>
+          <div class="lado">
+            <div><small>Estimativa ilustrativa</small><b class="valor" id="valor">R$ 0</b></div>
+            <a class="btn claro" id="zap" href="#" target="_blank" rel="noopener">Receber orçamento deste projeto <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section class="projetos" id="projetos" aria-labelledby="t-proj">
+    <div class="wrap">
+      <div class="cab">
+        <div>
+          <span class="eyebrow">Projetos</span>
+          <h2 id="t-proj" style="margin-top:14px">Ambientes que <em>já saíram do papel.</em></h2>
+        </div>
+        <div>
+          <p class="lead">Toque em um projeto para ver em tela cheia, com os materiais usados.</p>
+          <p class="nota-img">Imagens ilustrativas.</p>
+        </div>
+      </div>
+    </div>
+    <div class="trilho" id="trilho"></div>
+  </section>
+
+  <!-- MATERIAIS -->
+  <section class="materiais" id="materiais" aria-labelledby="t-mat">
+    <div class="wrap">
+      <div class="cab">
+        <div>
+          <span class="eyebrow">Materiais</span>
+          <h2 id="t-mat" style="margin-top:14px">Madeira de verdade <em>no olhar e no toque.</em></h2>
+        </div>
+        <p class="lead">MDF com padrões amadeirados de veio contínuo, lâminas naturais e pedras selecionadas. Passe o mouse para ver de perto.</p>
+      </div>
+      <div class="mats" id="mats"></div>
+      <div class="cores" id="cores"><span>Lisos foscos:</span></div>
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section class="processo" id="processo" aria-labelledby="t-proc">
+    <div class="wrap">
+      <div class="cab">
+        <div>
+          <span class="eyebrow">Como trabalhamos</span>
+          <h2 id="t-proc" style="margin-top:14px">Quatro etapas, <em>um responsável.</em></h2>
+        </div>
+        <p class="lead">Um projetista acompanha você da primeira medição até o último ajuste de dobradiça.</p>
+      </div>
+      <div class="linha-tempo" id="linhaTempo">
+        <div class="trilha" aria-hidden="true"><i></i></div>
+        <article class="etapa"><span class="num">01</span><h3>Medição</h3><p>Visita ao local para medir paredes, alturas, pontos de água, gás e tomadas.</p><span class="prazo">1 visita</span><div class="ft"><img src="img/medicao.webp" alt="Planta baixa, trena e ferramentas sobre a mesa" loading="lazy"></div></article>
+        <article class="etapa"><span class="num">02</span><h3>Projeto 3D</h3><p>Você aprova o ambiente em 3D com cores, divisões internas e iluminação.</p><span class="prazo">Ajustes até aprovar</span><div class="ft"><img src="img/projeto.webp" alt="Mesa de trabalho com notebook, desenhos e ferramentas" loading="lazy"></div></article>
+        <article class="etapa"><span class="num">03</span><h3>Produção</h3><p>Corte, fita de borda e furação na fábrica, com conferência peça por peça.</p><span class="prazo">Prazo no contrato</span><div class="ft"><img src="img/producao-pecas.webp" alt="Peças de MDF cortadas e projeto impresso" loading="lazy"></div></article>
+        <article class="etapa"><span class="num">04</span><h3>Montagem</h3><p>Instalação pela nossa equipe, regulagem final e limpeza do ambiente.</p><span class="prazo">Equipe própria</span><div class="ft"><img src="img/montagem.webp" alt="Montador furando peça de madeira" loading="lazy"></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contato" id="contato" aria-labelledby="t-cont">
+    <div class="fundo" aria-hidden="true"><img src="img/closet.webp" alt="" loading="lazy"></div>
+    <div class="wrap">
+      <div>
+        <span class="eyebrow" style="color:#D9B98C">Vamos começar</span>
+        <h2 id="t-cont" style="margin-top:14px">Conte qual ambiente <em>você quer mudar.</em></h2>
+        <p class="lead">Mande uma mensagem com o ambiente e o bairro. A gente marca a medição e leva amostras dos materiais.</p>
+        <div class="acoes">
+          <a class="btn claro" href="https://wa.me/5554999999999?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20m%C3%B3veis%20planejados." target="_blank" rel="noopener">Chamar no WhatsApp <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+          <a class="btn linha" href="#monte">Montar uma cozinha</a>
+        </div>
+      </div>
+      <dl>
+        <div><dt>Showroom</dt><dd>Av. Brasil, 0000 · Centro · Passo Fundo, RS</dd></div>
+        <div><dt>Horário</dt><dd>Segunda a sexta, 8h às 18h · Sábado, 9h às 12h</dd></div>
+        <div><dt>Ambientes</dt><dd class="amb"><span>Cozinhas</span><span>Closets</span><span>Dormitórios</span><span>Home office</span><span>Salas</span><span>Banheiros</span><span>Áreas de serviço</span></dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Site por CONREC Produtora.</span>
+    <span class="creditos">Fotos: Pexels (imagens 6758773, 6758779, 6758771, 6588594, 6585750, 6489089, 6585757, 6489090, 6489091, 6585764, 6758778, 6758786, 6585754, 5805489, 7285926, 834892, 4491918; texturas recortadas de 6585761, 6758782, 6585758, 6588587).</span>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Projeto em tela cheia" aria-hidden="true">
+  <div class="barra"><span id="lbCont">1 / 1</span><button class="fechar" id="lbFechar" aria-label="Fechar"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3l12 12M15 3L3 15"/></svg></button></div>
+  <figure><img id="lbImg" alt=""></figure>
+  <div class="rodape"><div><b id="lbTit"></b><p id="lbDesc"></p></div><div class="navs"><button id="lbAnt" aria-label="Projeto anterior"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M11 3L5 9l6 6"/></svg></button><button id="lbProx" aria-label="Próximo projeto"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3l6 6-6 6"/></svg></button></div></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+'use strict';
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const NS='http://www.w3.org/2000/svg';
+const reduz=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ============ materiais ============ */
+const TEX={ // arquivo, largura e altura do ladrilho (unidades do SVG)
+  'nogueira':['img/tex-nogueira.webp',120,426],
+  'carvalho':['img/tex-carvalho.webp',120,377],
+  'carvalho-claro':['img/tex-carvalho-claro.webp',150,270],
+  'preto':['img/tex-preto.webp',200,300],
+  'marmore':['img/tex-marmore.webp',260,312]
+};
+const MATS=[
+  {id:'offwhite',n:'Off-white',c:'#ECE7DF',p:0},
+  {id:'areia',n:'Areia',c:'#D6C8B2',p:0},
+  {id:'fendi',n:'Fendi',c:'#B4A794',p:200},
+  {id:'salvia',n:'Verde sálvia',c:'#8C9884',p:400},
+  {id:'petroleo',n:'Azul petróleo',c:'#2F4954',p:400},
+  {id:'grafite',n:'Grafite',c:'#3A3936',p:300},
+  {id:'preto',n:'Preto texturizado',c:'#1F1E1C',t:'preto',p:600},
+  {id:'carvalho-claro',n:'Carvalho claro',c:'#D9CEBF',t:'carvalho-claro',p:900},
+  {id:'carvalho',n:'Carvalho',c:'#B58658',t:'carvalho',p:900},
+  {id:'nogueira',n:'Nogueira',c:'#6B4630',t:'nogueira',p:1200}
+];
+const M=id=>MATS.find(m=>m.id===id);
+const fillOf=m=>m.t?`url(#T-${m.t}-${curSvg})`:m.c;
+let curSvg='';
+
+function el(tag,at,parent){const e=document.createElementNS(NS,tag);for(const k in at)e.setAttribute(k,at[k]);if(parent)parent.appendChild(e);return e}
+function defsBase(svg,key){
+  const d=el('defs',{},svg);
+  for(const k in TEX){const [src,w,h]=TEX[k];const p=el('pattern',{id:`T-${k}-${key}`,patternUnits:'userSpaceOnUse',width:w*2,height:h*2},d);
+    el('image',{href:src,width:w,height:h,preserveAspectRatio:'none'},p);
+    el('image',{href:src,width:w,height:h,preserveAspectRatio:'none',transform:`translate(${w*2},0) scale(-1,1)`},p);
+    el('image',{href:src,width:w,height:h,preserveAspectRatio:'none',transform:`translate(0,${h*2}) scale(1,-1)`},p);
+    el('image',{href:src,width:w,height:h,preserveAspectRatio:'none',transform:`translate(${w*2},${h*2}) scale(-1,-1)`},p);}
+  d.insertAdjacentHTML('beforeend',`
+    <linearGradient id="sh-${key}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".10"/><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".16"/></linearGradient>
+    <linearGradient id="shv-${key}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity=".22"/><stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient>
+    <linearGradient id="shu-${key}" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#000" stop-opacity=".18"/><stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient>
+    <linearGradient id="led-${key}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD9A6" stop-opacity=".85"/><stop offset=".35" stop-color="#FFD9A6" stop-opacity=".32"/><stop offset="1" stop-color="#FFD9A6" stop-opacity="0"/></linearGradient>
+    <radialGradient id="pend-${key}" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFE3B8" stop-opacity=".9"/><stop offset=".3" stop-color="#FFD9A0" stop-opacity=".42"/><stop offset=".65" stop-color="#FFD9A0" stop-opacity=".12"/><stop offset="1" stop-color="#FFD9A0" stop-opacity="0"/></radialGradient>
+    <linearGradient id="inox-${key}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#B9BDC0"/><stop offset=".45" stop-color="#E3E5E7"/><stop offset="1" stop-color="#ABB0B4"/></linearGradient>
+    <linearGradient id="vid-${key}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2B2B2D"/><stop offset=".5" stop-color="#1A1A1B"/><stop offset="1" stop-color="#2F3032"/></linearGradient>
+    <linearGradient id="latao-${key}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D6B57A"/><stop offset=".5" stop-color="#B38B4D"/><stop offset="1" stop-color="#8E6A35"/></linearGradient>
+    <linearGradient id="ceu-${key}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9DCE6"/><stop offset="1" stop-color="#EEF2EF"/></linearGradient>
+    <linearGradient id="ceuN-${key}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#101A2B"/><stop offset="1" stop-color="#26324A"/></linearGradient>
+    <linearGradient id="raio-${key}" x1="0" y1="0" x2="1" y2=".35"><stop offset="0" stop-color="#FFF8EA" stop-opacity=".55"/><stop offset="1" stop-color="#FFF8EA" stop-opacity="0"/></linearGradient>
+    <linearGradient id="piso-${key}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9B8A0"/><stop offset="1" stop-color="#B9A68B"/></linearGradient>
+    <linearGradient id="parede-${key}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9E3D9"/><stop offset="1" stop-color="#DED6C9"/></linearGradient>
+    <filter id="blur-${key}" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="blurS-${key}" x="-10%" y="-50%" width="120%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+    <pattern id="metro-${key}" width="48" height="24" patternUnits="userSpaceOnUse"><rect width="48" height="24" fill="#F1EEE8"/><path d="M0 .5H48M0 12.5H48M24 0V12M0 12V24M48 12V24" stroke="#CFC7BB" stroke-width="1"/><rect x="1" y="1" width="22" height="3" fill="#fff" opacity=".5"/><rect x="25" y="13" width="22" height="3" fill="#fff" opacity=".5"/></pattern>
+    <pattern id="ripas-${key}" width="18" height="10" patternUnits="userSpaceOnUse"><rect width="18" height="10" fill="transparent"/><rect x="15" width="3" height="10" fill="#000" opacity=".35"/><rect x="1" width="1" height="10" fill="#fff" opacity=".12"/></pattern>
+    <pattern id="quartzo-${key}" width="90" height="90" patternUnits="userSpaceOnUse"><rect width="90" height="90" fill="#F0EDE8"/>${pontos(90,40,'#D9D3CA',.9)}${pontos(90,14,'#fff',1.2)}</pattern>
+    <pattern id="granito-${key}" width="90" height="90" patternUnits="userSpaceOnUse"><rect width="90" height="90" fill="#22201E"/>${pontos(90,70,'#3A3734',1.1)}${pontos(90,30,'#57524C',.8)}${pontos(90,10,'#8D857B',.7)}</pattern>
+    <pattern id="concreto-${key}" width="120" height="120" patternUnits="userSpaceOnUse"><rect width="120" height="120" fill="#A39E97"/>${pontos(120,60,'#958F88',1.4)}${pontos(120,40,'#B3AEA7',1.1)}</pattern>`);
+  return d;
+}
+function pontos(s,n,c,r){let o='';let seed=n*7+s;const rnd=()=>{seed=(seed*9301+49297)%233280;return seed/233280};for(let i=0;i<n;i++)o+=`<circle cx="${(rnd()*s).toFixed(1)}" cy="${(rnd()*s).toFixed(1)}" r="${(r*(.5+rnd())).toFixed(2)}" fill="${c}"/>`;return o}
+
+/* porta/frente com sombreamento e frisos */
+function frente(g,x,y,w,h,zona,key){
+  el('rect',{x,y,width:w,height:h,class:'t mf','data-z':zona},g);
+  el('rect',{x,y,width:w,height:h,fill:`url(#sh-${key})`,style:'mix-blend-mode:multiply'},g);
+  el('path',{d:`M${x+.5} ${y+h}V${y+.5}H${x+w}`,stroke:'#fff','stroke-opacity':.22,fill:'none','stroke-width':1},g);
+  el('path',{d:`M${x+w-.5} ${y}V${y+h-.5}H${x}`,stroke:'#000','stroke-opacity':.28,fill:'none','stroke-width':1.2},g);
+}
+/* puxadores */
+function puxador(g,tipo,x,y,len,orient,key){
+  // tipo aplicado depois via classes; desenha as três variantes e liga/desliga
+  const gg=el('g',{class:'pux'},g);
+  if(orient==='h'){
+    el('rect',{x:x,y:y-3,width:len,height:6,rx:1,fill:'#141312',opacity:.55,class:'px-cava'},gg);
+    el('rect',{x:x+len*.25,y:y-2.5,width:len*.5,height:5,rx:2.5,fill:'#1B1A19',class:'px-perfil'},gg);
+    el('rect',{x:x+len*.25,y:y-2.5,width:len*.5,height:5,rx:2.5,fill:`url(#latao-${key})`,class:'px-latao'},gg);
+  }else{
+    el('rect',{x:x-3,y:y,width:6,height:len,rx:1,fill:'#141312',opacity:.55,class:'px-cava'},gg);
+    el('rect',{x:x-2.5,y:y+len*.2,width:5,height:len*.6,rx:2.5,fill:'#1B1A19',class:'px-perfil'},gg);
+    el('rect',{x:x-2.5,y:y+len*.2,width:5,height:len*.6,rx:2.5,fill:`url(#latao-${key})`,class:'px-latao'},gg);
+  }
+}
+
+/* ============ COZINHA ============ */
+function cozinha(){
+  const svg=$('#svCoz'),k='c';curSvg=k;defsBase(svg,k);
+  const g=el('g',{},svg);
+  // parede, teto, piso
+  el('rect',{x:0,y:0,width:1200,height:600,fill:`url(#parede-${k})`},g);
+  el('rect',{x:0,y:0,width:1200,height:34,fill:'#DCD4C7'},g);
+  el('rect',{x:0,y:34,width:1200,height:3,fill:'#000',opacity:.06},g);
+  [250,500,760,1010].forEach(x=>{el('ellipse',{cx:x,cy:36,rx:13,ry:3,fill:'#F7F2E8'},g)});
+  el('rect',{x:0,y:600,width:1200,height:160,fill:`url(#piso-${k})`},g);
+  // tábuas em perspectiva
+  const vp=[600,380];let tab='';for(let i=-14;i<=14;i++){const xb=600+i*92;tab+=`M${(vp[0]+(xb-vp[0])*((600-vp[1])/(760-vp[1]))).toFixed(1)} 600L${xb} 760`;}
+  el('path',{d:tab,stroke:'#A8957A',"stroke-width":1,opacity:.55,fill:'none'},g);
+  [618,642,672,710].forEach(y=>el('path',{d:`M0 ${y}H1200`,stroke:'#A8957A','stroke-width':.6,opacity:.25},g));
+  el('rect',{x:0,y:598,width:1200,height:4,fill:'#000',opacity:.12},g);
+  // janela
+  el('rect',{x:34,y:88,width:92,height:480,fill:'#CFC6B8'},g);
+  el('rect',{x:42,y:96,width:76,height:464,fill:`url(#ceu-${k})`,class:'t',id:'cJan'},g);
+  el('rect',{x:42,y:96,width:76,height:464,fill:`url(#ceuN-${k})`,class:'noite',opacity:0},g);
+  el('g',{class:'noite',opacity:0,id:'cCidade'},g).innerHTML=pontos(76,18,'#F6D9A0',1.3).replace(/cx="([\d.]+)" cy="([\d.]+)"/g,(m,a,b)=>`cx="${42+ +a}" cy="${400+ +b*2}"`);
+  el('path',{d:'M80 96V560M42 330H118',stroke:'#CFC6B8','stroke-width':5},g);
+  el('rect',{x:18,y:76,width:130,height:510,fill:'#F7F3EC',opacity:.5},g);
+  el('path',{d:'M30 76V586M52 76V586M118 76V586M140 76V586',stroke:'#E8E1D5','stroke-width':6,opacity:.6},g);
+  // luz do dia entrando
+  el('polygon',{points:'126,110 126,560 520,760 760,760',fill:`url(#raio-${k})`,class:'dia',style:'mix-blend-mode:screen'},g);
+
+  // torre esquerda (forno)
+  const tL=el('g',{},g);
+  frente(tL,150,60,170,110,'inf',k);
+  el('rect',{x:150,y:172,width:170,height:250,fill:'#1E1F20',class:'t mf2','data-z':'inf'},tL);
+  el('rect',{x:160,y:182,width:150,height:132,rx:3,fill:`url(#vid-${k})`},tL);
+  el('rect',{x:172,y:200,width:126,height:96,rx:2,fill:'#0E0F10'},tL);
+  el('rect',{x:172,y:188,width:126,height:6,rx:3,fill:`url(#inox-${k})`},tL);
+  el('rect',{x:160,y:322,width:150,height:92,rx:3,fill:`url(#vid-${k})`},tL);
+  el('rect',{x:172,y:336,width:96,height:62,rx:2,fill:'#0E0F10'},tL);
+  el('circle',{cx:290,cy:352,r:5,fill:'#5A5D60'},tL);el('circle',{cx:290,cy:372,r:5,fill:'#5A5D60'},tL);
+  frente(tL,150,424,170,80,'inf',k);frente(tL,150,506,170,82,'inf',k);
+  puxador(tL,'',160,432,150,'h',k);puxador(tL,'',160,514,150,'h',k);puxador(tL,'',312,90,60,'v',k);
+  el('rect',{x:150,y:588,width:170,height:12,fill:'#1a1816'},tL);
+
+  // superiores
+  const sup=el('g',{},g);
+  frente(sup,320,90,140,210,'sup',k);frente(sup,460,90,140,210,'sup',k);
+  // nicho aberto
+  el('rect',{x:600,y:90,width:140,height:210,class:'t mf','data-z':'sup'},sup);
+  el('rect',{x:610,y:100,width:120,height:190,fill:'#000',opacity:.28},sup);
+  el('rect',{x:610,y:100,width:120,height:190,class:'t mf','data-z':'sup',opacity:.55},sup);
+  el('rect',{x:610,y:100,width:120,height:22,fill:`url(#shv-${k})`},sup);
+  el('rect',{x:610,y:192,width:120,height:8,class:'t mf','data-z':'sup'},sup);
+  el('rect',{x:610,y:200,width:120,height:6,fill:`url(#shv-${k})`},sup);
+  el('rect',{x:612,y:100,width:116,height:4,fill:`url(#led-${k})`,class:'ledC'},sup);
+  // objetos do nicho
+  sup.insertAdjacentHTML('beforeend',`<path d="M628 192c0-26 6-34 16-34s16 8 16 34z" fill="#C9BFAF"/><rect x="666" y="166" width="20" height="26" rx="3" fill="#8E7C67"/><ellipse cx="707" cy="188" rx="15" ry="4" fill="#EAE4DA"/><path d="M693 188q14 -18 28 0" fill="#EAE4DA"/><rect x="624" y="262" width="52" height="28" rx="2" fill="#E9E2D6"/><rect x="628" y="252" width="44" height="10" rx="2" fill="#D7CFC2"/><path d="M700 290c0-18 4-26 12-26s12 8 12 26z" fill="#6E7E68"/><path d="M712 266c-4-12 2-20 8-24M712 266c2-12 -4-18 -10-22" stroke="#5E6E58" stroke-width="2" fill="none"/>`);
+  frente(sup,740,90,140,210,'sup',k);
+  puxador(sup,'',330,292,120,'h',k);puxador(sup,'',470,292,120,'h',k);puxador(sup,'',750,292,120,'h',k);
+  el('rect',{x:320,y:298,width:560,height:4,fill:'#000',opacity:.25},sup);
+
+  // revestimento
+  el('rect',{x:320,y:302,width:560,height:134,id:'cRev',class:'t'},g);
+  el('rect',{x:320,y:302,width:560,height:134,fill:`url(#ripas-${k})`,id:'cRipas',opacity:0},g);
+  el('rect',{x:320,y:302,width:560,height:30,fill:`url(#shv-${k})`,class:'semLed'},g);
+  el('rect',{x:320,y:302,width:560,height:134,fill:`url(#led-${k})`,class:'ledC',style:'mix-blend-mode:screen'},g);
+  el('rect',{x:322,y:300,width:556,height:3,rx:1.5,fill:'#FFF2DC',class:'ledC'},g);
+  // tomadas
+  el('rect',{x:432,y:376,width:30,height:18,rx:2,fill:'#F4F1EC',stroke:'#CFC7BB'},g);el('rect',{x:812,y:376,width:30,height:18,rx:2,fill:'#F4F1EC',stroke:'#CFC7BB'},g);
+
+  // bancada de fundo
+  el('rect',{x:316,y:432,width:568,height:6,class:'t',id:'cTampoTopo'},g);
+  el('rect',{x:316,y:438,width:568,height:16,class:'t',id:'cTampo'},g);
+  el('rect',{x:316,y:438,width:568,height:16,fill:`url(#sh-${k})`,style:'mix-blend-mode:multiply'},g);
+  el('rect',{x:316,y:454,width:568,height:4,fill:'#000',opacity:.25},g);
+  // objetos da bancada: torneira, cuba, tábua, cooktop
+  g.insertAdjacentHTML('beforeend',`<path d="M400 432V378c0-16 30-16 30 0v10" stroke="#3E3F41" stroke-width="5" fill="none" stroke-linecap="round"/><rect x="392" y="428" width="16" height="6" rx="2" fill="#3E3F41"/><rect x="360" y="431" width="86" height="3" fill="#000" opacity=".35"/><rect x="520" y="404" width="60" height="28" rx="3" fill="#B58A5E"/><rect x="520" y="404" width="60" height="28" rx="3" fill="url(#sh-${k})"/><path d="M596 432c0-20 6-28 14-28s14 8 14 28z" fill="#D6CEC1"/><path d="M610 404c-6-16-2-26 6-30M610 404c4-14 0-22-8-28M610 404c0-14 6-20 12-22" stroke="#6E7E68" stroke-width="2.5" fill="none"/><rect x="694" y="429" width="130" height="5" rx="1.5" fill="#121212"/><rect x="700" y="429.5" width="118" height="1.5" fill="#3A3A3A"/>`);
+
+  // inferiores de fundo
+  const inf=el('g',{},g);
+  frente(inf,320,458,112,130,'inf',k);frente(inf,432,458,112,130,'inf',k);
+  frente(inf,544,458,112,42,'inf',k);frente(inf,544,500,112,44,'inf',k);frente(inf,544,544,112,44,'inf',k);
+  frente(inf,656,458,112,64,'inf',k);frente(inf,656,522,112,66,'inf',k);
+  frente(inf,768,458,112,130,'inf',k);
+  puxador(inf,'',326,466,100,'h',k);puxador(inf,'',438,466,100,'h',k);puxador(inf,'',550,466,100,'h',k);puxador(inf,'',550,508,100,'h',k);puxador(inf,'',550,552,100,'h',k);puxador(inf,'',662,466,100,'h',k);puxador(inf,'',662,530,100,'h',k);puxador(inf,'',774,466,100,'h',k);
+  el('rect',{x:320,y:588,width:560,height:12,fill:'#1a1816'},inf);
+
+  // torre direita (geladeira integrada)
+  const tR=el('g',{},g);
+  frente(tR,880,60,180,98,'inf',k);frente(tR,880,158,180,248,'inf',k);frente(tR,880,406,180,182,'inf',k);
+  puxador(tR,'',890,170,200,'v',k);puxador(tR,'',890,414,160,'v',k);puxador(tR,'',890,66,86,'v',k);
+  el('rect',{x:880,y:588,width:180,height:12,fill:'#1a1816'},tR);
+  // oclusão nas laterais das torres
+  [[320,0],[880,1]].forEach(([x,r])=>el('rect',{x:r?x:x-0,y:60,width:10,height:540,fill:`url(#shv-${k})`,transform:`rotate(${r?90:-90} ${x} 60)`,opacity:0},g));
+  el('rect',{x:1060,y:60,width:14,height:540,fill:'#000',opacity:.06},g);
+  // planta à direita
+  g.insertAdjacentHTML('beforeend',`<path d="M1104 600l-6-74h56l-6 74z" fill="#CDBFA9"/><path d="M1104 600l-6-74h56l-6 74z" fill="url(#sh-${k})"/><g fill="#5F7259"><path d="M1126 528c-30-40-34-90-14-130 6 40 20 80 14 130z"/><path d="M1126 528c10-50 40-86 70-96-20 30-40 70-70 96z"/><path d="M1126 528c-20-30-60-50-84-48 26 14 56 30 84 48z"/><path d="M1126 528c4-60-10-110-36-150 30 30 46 90 36 150z" opacity=".85"/></g>`);
+
+  // pendentes
+  const pend=el('g',{},g);
+  [470,730].forEach(x=>{
+    el('path',{d:`M${x} 34V372`,stroke:'#2A2724','stroke-width':1.5},pend);
+    el('path',{d:`M${x-38} 404c0-22 17-34 38-34s38 12 38 34z`,fill:'#2B2724'},pend);
+    el('path',{d:`M${x-38} 404h76`,stroke:`url(#latao-${k})`,'stroke-width':3},pend);
+    el('ellipse',{cx:x,cy:405,rx:26,ry:3.5,fill:'#FFE6C0'},pend);
+  });
+  // ILHA
+  const ilha=el('g',{},g);
+  el('ellipse',{cx:610,cy:722,rx:330,ry:16,fill:'#000',opacity:.28,filter:`url(#blur-${k})`},ilha);
+  el('polygon',{points:'346,556 874,556 900,572 320,572',class:'t',id:'cIlhaTopo'},ilha);
+  el('polygon',{points:'346,556 874,556 900,572 320,572',fill:'#fff',opacity:.18},ilha);
+  el('rect',{x:320,y:572,width:580,height:20,class:'t',id:'cIlhaFrente'},ilha);
+  el('rect',{x:320,y:572,width:580,height:20,fill:`url(#sh-${k})`,style:'mix-blend-mode:multiply'},ilha);
+  el('rect',{x:320,y:592,width:580,height:5,fill:'#000',opacity:.3},ilha);
+  frente(ilha,330,597,140,112,'inf',k);frente(ilha,470,597,140,112,'inf',k);frente(ilha,610,597,140,112,'inf',k);frente(ilha,750,597,128,112,'inf',k);
+  puxador(ilha,'',336,605,128,'h',k);puxador(ilha,'',476,605,128,'h',k);puxador(ilha,'',616,605,128,'h',k);puxador(ilha,'',756,605,116,'h',k);
+  // lateral cascata
+  el('rect',{x:878,y:592,width:22,height:126,class:'t',id:'cCascata'},ilha);
+  el('rect',{x:878,y:592,width:22,height:126,fill:'#000',opacity:.12},ilha);
+  el('rect',{x:330,y:709,width:548,height:9,fill:'#1a1816'},ilha);
+  el('rect',{x:330,y:597,width:548,height:14,fill:`url(#shv-${k})`},ilha);
+  // objetos da ilha
+  ilha.insertAdjacentHTML('beforeend',`<ellipse cx="520" cy="560" rx="42" ry="6" fill="#E3DCD0"/><path d="M478 560q42 -26 84 0" fill="#E3DCD0"/><circle cx="508" cy="548" r="9" fill="#C9A24A"/><circle cx="526" cy="545" r="9" fill="#B4472F"/><circle cx="540" cy="550" r="8" fill="#C9A24A"/><rect x="690" y="544" width="70" height="8" rx="1" fill="#2E3B33"/><rect x="694" y="536" width="62" height="8" rx="1" fill="#C8B89E"/><rect x="700" y="529" width="52" height="7" rx="1" fill="#7B5C45"/><path d="M790 556c0-30 8-40 16-40s16 10 16 40z" fill="#EAE4DA"/><path d="M806 516c-3-16 4-30 12-36M806 516c-6-12-14-18-20-20" stroke="#7B8C72" stroke-width="2" fill="none"/>`);
+  // reflexo no tampo
+  el('polygon',{points:'440,557 500,557 470,571 410,571',fill:'#fff',opacity:.22,class:'reflexo'},ilha);
+  el('polygon',{points:'700,557 760,557 730,571 670,571',fill:'#fff',opacity:.22,class:'reflexo'},ilha);
+  // banquetas
+  const bq=el('g',{},g);
+  [430,610,790].forEach(x=>{
+    bq.insertAdjacentHTML('beforeend',`<ellipse cx="${x}" cy="752" rx="40" ry="5" fill="#000" opacity=".22" filter="url(#blurS-${k})"/><path d="M${x-30} 668L${x-38} 752M${x+30} 668L${x+38} 752M${x-14} 668L${x-12} 750M${x+14} 668L${x+12} 750" stroke="#1F1D1B" stroke-width="4" stroke-linecap="round"/><path d="M${x-34} 712H${x+34}" stroke="#1F1D1B" stroke-width="3"/><rect x="${x-42}" y="652" width="84" height="16" rx="8" fill="#9A6B45"/><rect x="${x-42}" y="652" width="84" height="7" rx="3.5" fill="#B88A5E"/><path d="M${x-34} 652c0-22 14-30 34-30s34 8 34 30" fill="none" stroke="#1F1D1B" stroke-width="4"/>`);
+  });
+
+  // NOITE: escurecimento e luzes
+  el('rect',{x:0,y:0,width:1200,height:760,fill:'#0D1220',opacity:0,class:'noite escuro',style:'mix-blend-mode:multiply','data-max':.62},g);
+  const luz=el('g',{class:'noite',opacity:0,style:'mix-blend-mode:screen'},g);
+  [470,730].forEach(x=>{el('ellipse',{cx:x,cy:470,rx:230,ry:190,fill:`url(#pend-${k})`},luz);el('ellipse',{cx:x,cy:406,rx:30,ry:5,fill:'#FFE6C0'},luz)});
+  el('rect',{x:320,y:302,width:560,height:150,fill:`url(#led-${k})`,class:'ledC'},luz);
+  el('rect',{x:612,y:100,width:116,height:90,fill:`url(#led-${k})`,class:'ledC'},luz);
+  [250,500,760,1010].forEach(x=>el('ellipse',{cx:x,cy:40,rx:90,ry:70,fill:`url(#pend-${k})`,opacity:.55},luz));
+  el('ellipse',{cx:610,cy:574,rx:240,ry:10,fill:'#FFE3B8',opacity:.25},luz);
+}
+
+/* ============ CLOSET ============ */
+function closet(){
+  const svg=$('#svClo'),k='l';curSvg=k;defsBase(svg,k);
+  const g=el('g',{},svg);
+  el('rect',{x:0,y:0,width:1200,height:640,fill:`url(#parede-${k})`},g);
+  el('rect',{x:0,y:0,width:1200,height:30,fill:'#DCD4C7'},g);
+  el('rect',{x:0,y:640,width:1200,height:120,fill:`url(#piso-${k})`},g);
+  let tab='';for(let i=-14;i<=14;i++){const xb=600+i*92;tab+=`M${(600+(xb-600)*((640-420)/(760-420))).toFixed(1)} 640L${xb} 760`;}
+  el('path',{d:tab,stroke:'#A8957A','stroke-width':1,opacity:.55,fill:'none'},g);
+  el('rect',{x:0,y:638,width:1200,height:4,fill:'#000',opacity:.12},g);
+  // tapete e pufe
+  g.insertAdjacentHTML('beforeend',`<ellipse cx="600" cy="712" rx="300" ry="34" fill="#E8E0D3"/><ellipse cx="600" cy="712" rx="300" ry="34" fill="none" stroke="#D3C8B6" stroke-width="2"/>`);
+  const X0=110,X1=1090,Y0=48,Y1=628,T=18,n=5;const mw=(X1-X0-T*(n+1))/n;
+  const fundo=el('g',{},g);
+  // fundo dos nichos
+  for(let i=0;i<n;i++){const x=X0+T+i*(mw+T);el('rect',{x,y:Y0+T,width:mw,height:Y1-Y0-2*T,class:'t mfL','data-z':'fundoL'},fundo);el('rect',{x,y:Y0+T,width:mw,height:Y1-Y0-2*T,fill:'#000',opacity:.18},fundo);el('rect',{x,y:Y0+T,width:mw,height:40,fill:`url(#shv-${k})`},fundo);el('rect',{x,y:Y0+T,width:12,height:Y1-Y0-2*T,fill:'#000',opacity:.12},fundo);}
+  const est=el('g',{});
+  // luzes LED (dentro, abaixo do topo)
+  const leds=el('g',{class:'ledL'},g);
+  for(let i=0;i<n;i++){const x=X0+T+i*(mw+T);el('rect',{x,y:Y0+T,width:mw,height:240,fill:`url(#led-${k})`,style:'mix-blend-mode:screen'},leds);el('rect',{x:x+4,y:Y0+T+1,width:mw-8,height:3,rx:1.5,fill:'#FFF2DC'},leds);}
+  const conteudo=el('g',{},g);
+  const xs=i=>X0+T+i*(mw+T);
+  const roupa=(x,y,w,h,c)=>`<path d="M${x} ${y}h${w}l${-w*.08} ${h}h${-w*.84}z" fill="${c}"/><path d="M${x} ${y}h${w}l${-w*.08} ${h}h${-w*.84}z" fill="url(#sh-${k})"/>`;
+  const cabide=(x,y)=>`<path d="M${x} ${y-12}q0 -8 6 -6M${x-14} ${y}l14 -10l14 10" stroke="#3A3530" stroke-width="1.6" fill="none"/>`;
+  // M1: cabideiro longo + sapateira
+  let s='';const pal=['#2F3B45','#B9A48A','#7D2E2E','#E5DED2','#55604E','#1F1F22','#C9B79C','#8A9AA8'];
+  let x=xs(0);s+=`<rect x="${x+6}" y="96" width="${mw-12}" height="5" rx="2.5" fill="url(#latao-${k})"/>`;
+  for(let j=0;j<7;j++){const cx=x+18+j*((mw-36)/6);s+=cabide(cx,114)+roupa(cx-12,112,24,330-((j*37)%90),pal[j%8]);}
+  for(let r=0;r<3;r++){const y=500+r*42;s+=`<rect x="${x}" y="${y}" width="${mw}" height="8" class="t mfL" data-z="estL"/><rect x="${x}" y="${y+8}" width="${mw}" height="6" fill="url(#shv-${k})"/>`;for(let q=0;q<3;q++){const sx=x+14+q*((mw-28)/3);s+=`<path d="M${sx} ${y}c0-14 8-16 18-16h14c6 0 8 6 8 16z" fill="${['#2A2826','#B39A7C','#E2DBD0'][(q+r)%3]}"/>`}}
+  // M2: duplo cabideiro
+  x=xs(1);[100,360].forEach((ry,ri)=>{s+=`<rect x="${x+6}" y="${ry}" width="${mw-12}" height="5" rx="2.5" fill="url(#latao-${k})"/>`;for(let j=0;j<8;j++){const cx=x+16+j*((mw-32)/7);s+=cabide(cx,ry+18)+(ri===0?roupa(cx-11,ry+16,22,170,pal[(j+2)%8]):`<rect x="${cx-9}" y="${ry+16}" width="18" height="${150-(j%3)*10}" fill="${pal[(j+4)%8]}"/><rect x="${cx-9}" y="${ry+16}" width="18" height="${150-(j%3)*10}" fill="url(#sh-${k})"/>`);}});
+  // M3: prateleiras + gaveteiro
+  x=xs(2);for(let r=0;r<4;r++){const y=146+r*72;s+=`<rect x="${x}" y="${y}" width="${mw}" height="8" class="t mfL" data-z="estL"/><rect x="${x}" y="${y+8}" width="${mw}" height="8" fill="url(#shv-${k})"/>`;for(let q=0;q<3;q++){const bx=x+12+q*((mw-24)/3);const bw=(mw-24)/3-8;for(let z=0;z<4;z++)s+=`<rect x="${bx}" y="${y-10-z*11}" width="${bw}" height="10" rx="2" fill="${pal[(q*3+z+r)%8]}" opacity=".95"/>`}}
+  s+=`<rect x="${x}" y="430" width="${mw}" height="8" class="t mfL" data-z="estL"/>`;
+  for(let d=0;d<4;d++){const y=440+d*46;s+=`<g class="gav"><rect x="${x+4}" y="${y}" width="${mw-8}" height="44" class="t mfL" data-z="gavL"/><rect x="${x+4}" y="${y}" width="${mw-8}" height="44" fill="url(#sh-${k})" style="mix-blend-mode:multiply"/><path d="M${x+4} ${y+44}H${x+mw-4}" stroke="#000" stroke-opacity=".3"/></g>`;}
+  // M4: cabideiro duplo (camisas e calças)
+  x=xs(3);[100,360].forEach((ry,ri)=>{s+=`<rect x="${x+6}" y="${ry}" width="${mw-12}" height="5" rx="2.5" fill="url(#latao-${k})"/>`;for(let j=0;j<8;j++){const cx=x+16+j*((mw-32)/7);s+=cabide(cx,ry+18)+(ri===0?roupa(cx-11,ry+16,22,170,pal[(j+5)%8]):`<rect x="${cx-9}" y="${ry+16}" width="18" height="${150-(j%3)*10}" fill="${pal[(j+1)%8]}"/><rect x="${cx-9}" y="${ry+16}" width="18" height="${150-(j%3)*10}" fill="url(#sh-${k})"/>`);}});
+  // M5: bolsas e caixas
+  x=xs(4);for(let r=0;r<5;r++){const y=156+r*92;s+=`<rect x="${x}" y="${y}" width="${mw}" height="8" class="t mfL" data-z="estL"/><rect x="${x}" y="${y+8}" width="${mw}" height="8" fill="url(#shv-${k})"/>`;
+    if(r%2===0){s+=`<path d="M${x+22} ${y}l6 -44h44l6 44z" fill="${pal[(r+1)%8]}"/><path d="M${x+38} ${y-44}q12 -22 24 0" stroke="${pal[(r+1)%8]}" stroke-width="3" fill="none"/><rect x="${x+96}" y="${y-38}" width="54" height="38" rx="3" fill="#E4DCCF"/><rect x="${x+96}" y="${y-38}" width="54" height="8" fill="#D2C8B8"/>`}
+    else{s+=`<rect x="${x+16}" y="${y-30}" width="62" height="30" rx="3" fill="#2E2B28"/><path d="M${x+100} ${y}c0-30 10-40 20-40s20 10 20 40z" fill="${pal[(r+3)%8]}"/>`}}
+  conteudo.innerHTML=s;
+  // estrutura (laterais, topo, base)
+  for(let i=0;i<=n;i++){const x=X0+i*(mw+T);frente(est,x,Y0,T,Y1-Y0,'estL',k)}
+  frente(est,X0,Y0,X1-X0,T,'estL',k);frente(est,X0,Y1-T,X1-X0,T,'estL',k);
+  el('rect',{x:X0,y:Y1,width:X1-X0,height:12,fill:'#1a1816'},est);
+  g.appendChild(est);g.appendChild(leds);
+  // portas
+  const portas=el('g',{id:'lPortas'},g);
+  [0,1,3,4].forEach(i=>{const x=xs(i);
+    const p=el('g',{class:'porta','data-i':i},portas);
+    el('rect',{x,y:Y0+T,width:mw,height:Y1-Y0-2*T,class:'pVidro',fill:'#2A2522',opacity:.5},p);
+    el('rect',{x,y:Y0+T,width:mw,height:Y1-Y0-2*T,class:'pEsp',fill:'url(#inox-'+k+')',opacity:.9},p);
+    el('polygon',{points:`${x+mw*.15},${Y0+T} ${x+mw*.45},${Y0+T} ${x+mw*.05},${Y1-T} ${x-0},${Y1-T}`,fill:'#fff',opacity:.12},p);
+    el('rect',{x,y:Y0+T,width:mw,height:Y1-Y0-2*T,fill:'none',stroke:'#141312','stroke-width':3},p);
+    el('rect',{x:i<2?x+mw-10:x+6,y:300,width:4,height:120,rx:2,fill:'#141312'},p);
+  });
+  // pufe
+  g.insertAdjacentHTML('beforeend',`<ellipse cx="600" cy="742" rx="70" ry="9" fill="#000" opacity=".2" filter="url(#blurS-${k})"/><rect x="530" y="672" width="140" height="68" rx="30" fill="#B8A48A"/><rect x="530" y="672" width="140" height="30" rx="15" fill="#C9B79C"/><rect x="530" y="672" width="140" height="68" rx="30" fill="url(#sh-${k})"/>`);
+  el('rect',{x:0,y:0,width:1200,height:760,fill:'#0D1220',opacity:0,class:'noite escuro',style:'mix-blend-mode:multiply','data-max':.62},g);
+  const luz=el('g',{class:'noite',opacity:0,style:'mix-blend-mode:screen'},g);
+  for(let i=0;i<n;i++){const x=xs(i);el('rect',{x,y:Y0+T,width:mw,height:300,fill:`url(#led-${k})`,class:'ledL'},luz)}
+  el('ellipse',{cx:600,cy:30,rx:420,ry:140,fill:`url(#pend-${k})`,opacity:.5},luz);
+}
+
+/* ============ HOME OFFICE ============ */
+function escritorio(){
+  const svg=$('#svEsc'),k='e';curSvg=k;defsBase(svg,k);
+  const g=el('g',{},svg);
+  el('rect',{x:0,y:0,width:1200,height:620,fill:`url(#parede-${k})`},g);
+  el('rect',{x:0,y:0,width:1200,height:30,fill:'#DCD4C7'},g);
+  el('rect',{x:0,y:620,width:1200,height:140,fill:`url(#piso-${k})`},g);
+  let tab='';for(let i=-14;i<=14;i++){const xb=600+i*92;tab+=`M${(600+(xb-600)*((620-400)/(760-400))).toFixed(1)} 620L${xb} 760`;}
+  el('path',{d:tab,stroke:'#A8957A','stroke-width':1,opacity:.55,fill:'none'},g);
+  el('rect',{x:0,y:618,width:1200,height:4,fill:'#000',opacity:.12},g);
+  // janela à direita
+  el('rect',{x:1090,y:80,width:84,height:440,fill:'#CFC6B8'},g);el('rect',{x:1098,y:88,width:68,height:424,fill:`url(#ceu-${k})`},g);
+  el('rect',{x:1098,y:88,width:68,height:424,fill:`url(#ceuN-${k})`,class:'noite',opacity:0},g);
+  el('path',{d:'M1132 88V512',stroke:'#CFC6B8','stroke-width':5},g);
+  // painel ripado
+  const rip=el('g',{},g);
+  el('rect',{x:110,y:40,width:600,height:580,fill:'#141210'},rip);
+  for(let x=110;x<710;x+=24){el('rect',{x:x+2,y:40,width:20,height:580,class:'t mfE','data-z':'ripE'},rip);el('rect',{x:x+2,y:40,width:20,height:580,fill:`url(#sh-${k})`,style:'mix-blend-mode:multiply'},rip);el('rect',{x:x+2,y:40,width:2,height:580,fill:'#fff',opacity:.1},rip)}
+  el('rect',{x:110,y:40,width:600,height:30,fill:`url(#shv-${k})`},rip);
+  const ledE=el('g',{class:'ledE'},g);
+  el('rect',{x:104,y:40,width:6,height:580,fill:'#FFE6C0',opacity:.85},ledE);el('rect',{x:710,y:40,width:6,height:580,fill:'#FFE6C0',opacity:.85},ledE);
+  el('rect',{x:60,y:40,width:60,height:580,fill:'#FFD9A6',opacity:.18,filter:`url(#blur-${k})`},ledE);el('rect',{x:700,y:40,width:60,height:580,fill:'#FFD9A6',opacity:.18,filter:`url(#blur-${k})`},ledE);
+  // quadro no painel
+  g.insertAdjacentHTML('beforeend',`<rect x="300" y="120" width="190" height="130" fill="#F2EDE4"/><rect x="300" y="120" width="190" height="130" fill="none" stroke="#2A2622" stroke-width="5"/><path d="M322 220c30-40 60-60 90-40s50-30 60-50" stroke="#9A6B45" stroke-width="3" fill="none"/><circle cx="440" cy="160" r="14" fill="#C9A24A" opacity=".8"/>`);
+  // estante + armário à direita
+  const arm=el('g',{},g);
+  frente(arm,760,40,300,18,'armE',k);
+  for(let i=0;i<=2;i++){frente(arm,760+i*141,40,18,580,'armE',k)}
+  [170,290].forEach(y=>{frente(arm,778,y,123,12,'armE',k);frente(arm,919,y,123,12,'armE',k)});
+  frente(arm,778,400,264,12,'armE',k);
+  frente(arm,778,412,123,196,'armE',k);frente(arm,919,412,123,196,'armE',k);
+  puxador(arm,'',895,430,90,'v',k);puxador(arm,'',925,430,90,'v',k);
+  el('rect',{x:760,y:608,width:300,height:12,fill:'#1a1816'},arm);
+  [[778,58],[919,58],[778,182],[919,182],[778,302],[919,302]].forEach(([x,y])=>el('rect',{x,y,width:123,height:16,fill:`url(#shv-${k})`},arm));
+  // objetos estante
+  arm.insertAdjacentHTML('beforeend',`${[0,1,2,3,4,5].map(i=>`<rect x="${790+i*13}" y="${120-(i%3)*8}" width="11" height="${50+(i%3)*8}" fill="${['#2E3B33','#B9A48A','#7B5C45','#E5DED2','#1F1F22','#9A6B45'][i]}"/>`).join('')}<path d="M960 170c0-26 8-34 16-34s16 8 16 34z" fill="#D6CEC1"/><path d="M976 136c-4-14 0-24 8-28M976 136c-6-10-12-14-18-16" stroke="#6E7E68" stroke-width="2" fill="none"/><rect x="800" y="262" width="60" height="28" rx="2" fill="#E9E2D6"/><rect x="806" y="250" width="48" height="12" rx="2" fill="#2E3B33"/><path d="M940 290c0-18 10-24 30-24s30 6 30 24z" fill="#C9BFAF"/><ellipse cx="1000" cy="398" rx="18" ry="3" fill="#2A2622"/><path d="M990 398c0-20 4-28 10-28s10 8 10 28z" fill="#B58A5E"/><g>${[0,1,2,3,4].map(i=>`<rect x="${930+i*12}" y="${238-(i%2)*6}" width="10" height="${52+(i%2)*6}" fill="${['#7D2E2E','#E5DED2','#2F3B45','#C9B79C','#55604E'][i]}"/>`).join('')}</g>`);
+  // mesa flutuante
+  const mesa=el('g',{},g);
+  el('rect',{x:150,y:440,width:620,height:6,class:'t mfE','data-z':'mesaE'},mesa);
+  el('rect',{x:150,y:446,width:620,height:18,class:'t mfE','data-z':'mesaE'},mesa);
+  el('rect',{x:150,y:446,width:620,height:18,fill:`url(#sh-${k})`,style:'mix-blend-mode:multiply'},mesa);
+  el('rect',{x:540,y:464,width:200,height:58,class:'t mfE','data-z':'mesaE'},mesa);
+  el('rect',{x:540,y:464,width:200,height:58,fill:`url(#sh-${k})`,style:'mix-blend-mode:multiply'},mesa);
+  el('rect',{x:540,y:464,width:200,height:10,fill:`url(#shv-${k})`},mesa);
+  puxador(mesa,'',560,480,160,'h',k);
+  el('rect',{x:150,y:464,width:620,height:22,fill:'#000',opacity:.12,filter:`url(#blurS-${k})`},mesa);
+  // objetos da mesa
+  g.insertAdjacentHTML('beforeend',`<rect x="330" y="300" width="230" height="136" rx="6" fill="#151617"/><rect x="338" y="308" width="214" height="118" rx="3" fill="#2B3A44"/><rect x="338" y="308" width="214" height="118" rx="3" fill="url(#raio-${k})" opacity=".4"/><rect x="430" y="436" width="30" height="6" fill="#151617"/><rect x="405" y="438" width="80" height="4" rx="2" fill="#151617"/><rect x="380" y="430" width="120" height="8" rx="2" fill="#D9D3CA"/><path d="M220 440l10-70l50-30" stroke="#2A2622" stroke-width="4" fill="none"/><path d="M262 330l36 20l-14 18l-30-14z" fill="#2A2622"/><ellipse cx="225" cy="440" rx="22" ry="4" fill="#2A2622"/><path d="M640 440c0-22 8-30 18-30s18 8 18 30z" fill="#E3DCD0"/><path d="M658 410c-8-20-2-34 10-40M658 410c6-18 2-30-8-38M658 410c0-18 10-26 20-28" stroke="#5F7259" stroke-width="3" fill="none"/>`);
+  // cadeira
+  g.insertAdjacentHTML('beforeend',`<ellipse cx="440" cy="748" rx="90" ry="8" fill="#000" opacity=".22" filter="url(#blurS-${k})"/><path d="M440 640V720M440 720l-70 26M440 720l70 26M440 720l-20 30M440 720l20 30" stroke="#1F1D1B" stroke-width="6" stroke-linecap="round"/><rect x="368" y="606" width="144" height="36" rx="16" fill="#3E3A36"/><path d="M380 606c-6-90 4-150 60-150s66 60 60 150z" fill="#4A4540"/><path d="M380 606c-6-90 4-150 60-150s66 60 60 150z" fill="url(#sh-${k})"/>`);
+  el('rect',{x:0,y:0,width:1200,height:760,fill:'#0D1220',opacity:0,class:'noite escuro',style:'mix-blend-mode:multiply','data-max':.62},g);
+  const luz=el('g',{class:'noite',opacity:0,style:'mix-blend-mode:screen'},g);
+  el('ellipse',{cx:250,cy:420,rx:220,ry:160,fill:`url(#pend-${k})`},luz);
+  const le=el('g',{class:'ledE'},luz);el('rect',{x:40,y:40,width:110,height:580,fill:'#FFD9A6',opacity:.3,filter:`url(#blur-${k})`},le);el('rect',{x:690,y:40,width:110,height:580,fill:'#FFD9A6',opacity:.3,filter:`url(#blur-${k})`},le);
+  el('rect',{x:338,y:308,width:214,height:118,fill:'#7FA7C2',opacity:.35},luz);
+}
+
+cozinha();closet();escritorio();
+
+/* ============ estado e controles ============ */
+const TAMPO=[{id:'marmore',n:'Mármore branco',f:k=>`url(#T-marmore-${k})`,p:6200},{id:'quartzo',n:'Quartzo branco',f:k=>`url(#quartzo-${k})`,p:4200},{id:'granito',n:'Granito preto',f:k=>`url(#granito-${k})`,p:2600},{id:'concreto',n:'Cimentício',f:k=>`url(#concreto-${k})`,p:3200},{id:'madeira',n:'Carvalho maciço',f:k=>`url(#T-carvalho-${k})`,p:3800}];
+const REV=[{id:'tampo',n:'Igual ao tampo',p:2400},{id:'metro',n:'Metrô branco',p:900},{id:'ripado',n:'Ripado carvalho',p:2100},{id:'liso',n:'Pintura lisa',p:0}];
+const PUX=[{id:'cava',n:'Cava',p:0},{id:'perfil',n:'Perfil preto',p:900},{id:'latao',n:'Latão escovado',p:1600}];
+const PORTA=[{id:'aberto',n:'Sem portas',p:0},{id:'vidro',n:'Vidro fumê',p:5200},{id:'espelho',n:'Espelho',p:4400}];
+const st={supC:'carvalho',infC:'preto',tampo:'marmore',rev:'tampo',pux:'cava',ledC:true,estL:'grafite',fundoL:'carvalho',portaL:'aberto',gavL:'carvalho',ledL:true,ripE:'nogueira',mesaE:'carvalho-claro',armE:'offwhite',ledE:true,aba:'coz',noite:false};
+const LISTAS={supC:MATS,infC:MATS,estL:MATS,fundoL:MATS.filter(m=>['offwhite','fendi','grafite','preto','carvalho','nogueira'].includes(m.id)),gavL:MATS,ripE:MATS.filter(m=>['nogueira','carvalho','carvalho-claro','preto','salvia','offwhite'].includes(m.id)),mesaE:MATS.filter(m=>['nogueira','carvalho','carvalho-claro','preto','offwhite','grafite'].includes(m.id)),armE:MATS};
+const OPS={tampo:TAMPO,rev:REV,pux:PUX,portaL:PORTA};
+
+$$('[data-mat]').forEach(box=>{const key=box.dataset.mat;LISTAS[key].forEach(m=>{const b=document.createElement('button');b.type='button';b.title=m.n;b.setAttribute('aria-label',m.n);b.dataset.v=m.id;b.style.background=m.t?`url(${TEX[m.t][0]}) center/cover`:m.c;b.addEventListener('click',()=>{st[key]=m.id;render()});box.appendChild(b)})});
+$$('[data-op]').forEach(box=>{const key=box.dataset.op;OPS[key].forEach(o=>{const b=document.createElement('button');b.type='button';b.textContent=o.n;b.dataset.v=o.id;b.addEventListener('click',()=>{st[key]=o.id;render()});box.appendChild(b)})});
+$$('[data-ch]').forEach(b=>b.addEventListener('click',()=>{st[b.dataset.ch]=!st[b.dataset.ch];render()}));
+
+const fillMat=(id,k)=>{const m=M(id);return m.t?`url(#T-${m.t}-${k})`:m.c};
+function render(){
+  // cozinha
+  const c=$('#svCoz');
+  c.querySelectorAll('[data-z="sup"]').forEach(e=>e.setAttribute('fill',fillMat(st.supC,'c')));
+  c.querySelectorAll('[data-z="inf"]').forEach(e=>e.setAttribute('fill',fillMat(st.infC,'c')));
+  const tp=TAMPO.find(t=>t.id===st.tampo).f('c');
+  ['#cTampo','#cTampoTopo','#cIlhaTopo','#cIlhaFrente','#cCascata'].forEach(s=>$(s).setAttribute('fill',tp));
+  $('#cCascata').style.opacity=['marmore','quartzo','granito','concreto'].includes(st.tampo)?1:0;
+  c.querySelectorAll('.reflexo').forEach(e=>e.style.opacity=st.tampo==='madeira'||st.tampo==='concreto'?.06:.22);
+  const rv=st.rev;$('#cRev').setAttribute('fill',rv==='tampo'?TAMPO.find(t=>t.id===st.tampo).f('c'):rv==='metro'?'url(#metro-c)':rv==='ripado'?'url(#T-carvalho-c)':'#E4DDD2');
+  $('#cRipas').style.opacity=rv==='ripado'?1:0;
+  $$('#svCoz .px-cava').forEach(e=>e.style.opacity=st.pux==='cava'?.55:0);
+  $$('#svCoz .px-perfil').forEach(e=>e.style.opacity=st.pux==='perfil'?1:0);
+  $$('#svCoz .px-latao').forEach(e=>e.style.opacity=st.pux==='latao'?1:0);
+  $$('#svCoz .ledC').forEach(e=>e.style.opacity=st.ledC?1:0);
+  $$('#svCoz .semLed').forEach(e=>e.style.opacity=st.ledC?0:1);
+  // closet
+  $$('#svClo [data-z="estL"]').forEach(e=>e.setAttribute('fill',fillMat(st.estL,'l')));
+  $$('#svClo [data-z="fundoL"]').forEach(e=>e.setAttribute('fill',fillMat(st.fundoL,'l')));
+  $$('#svClo [data-z="gavL"]').forEach(e=>e.setAttribute('fill',fillMat(st.gavL,'l')));
+  $$('#svClo .ledL').forEach(e=>e.style.opacity=st.ledL?1:0);
+  $$('#svClo .porta').forEach(p=>{p.style.opacity=st.portaL==='aberto'?0:1;p.querySelector('.pVidro').style.opacity=st.portaL==='vidro'?.55:0;p.querySelector('.pEsp').style.opacity=st.portaL==='espelho'?.92:0});
+  $$('#svClo .px-cava,#svEsc .px-cava').forEach(e=>e.style.opacity=0);$$('#svClo .px-latao,#svEsc .px-latao').forEach(e=>e.style.opacity=0);
+  // escritório
+  $$('#svEsc [data-z="ripE"]').forEach(e=>e.setAttribute('fill',fillMat(st.ripE,'e')));
+  $$('#svEsc [data-z="mesaE"]').forEach(e=>e.setAttribute('fill',fillMat(st.mesaE,'e')));
+  $$('#svEsc [data-z="armE"]').forEach(e=>e.setAttribute('fill',fillMat(st.armE,'e')));
+  $$('#svEsc .ledE').forEach(e=>e.style.opacity=st.ledE?1:0);
+  // noite
+  $$('.svgk .noite').forEach(e=>e.style.opacity=st.noite?(e.dataset.max||1):0);
+  $$('.svgk .dia').forEach(e=>e.style.opacity=st.noite?0:1);
+  // controles
+  $$('[data-mat]').forEach(box=>box.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===st[box.dataset.mat])));
+  $$('[data-op]').forEach(box=>box.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===st[box.dataset.op])));
+  $$('[data-ch]').forEach(b=>b.setAttribute('aria-pressed',!!st[b.dataset.ch]));
+  $$('[data-nome]').forEach(s=>{const k=s.dataset.nome;const v=st[k];s.textContent=(LISTAS[k]?M(v).n:(OPS[k].find(o=>o.id===v)||{}).n)||''});
+  $$('.diaNoite button').forEach(b=>b.setAttribute('aria-pressed',(b.dataset.luz==='noite')===st.noite));
+  resumo();
+}
+const fmt=v=>'R$ '+(Math.round(v/500)*500).toLocaleString('pt-BR');
+function resumo(){
+  let itens=[],base=0,amb='';
+  if(st.aba==='coz'){amb='Cozinha com ilha';base=34000+M(st.supC).p*4+M(st.infC).p*7+TAMPO.find(t=>t.id===st.tampo).p+REV.find(r=>r.id===st.rev).p+PUX.find(p=>p.id===st.pux).p+(st.ledC?1600:0);
+    itens=[['Superiores',M(st.supC).n],['Inferiores e ilha',M(st.infC).n],['Tampo',TAMPO.find(t=>t.id===st.tampo).n],['Revestimento',REV.find(r=>r.id===st.rev).n],['Puxador',PUX.find(p=>p.id===st.pux).n],['LED',st.ledC?'Sim':'Não']];}
+  if(st.aba==='clo'){amb='Closet';base=19000+M(st.estL).p*5+M(st.fundoL).p*2+M(st.gavL).p*2+PORTA.find(p=>p.id===st.portaL).p+(st.ledL?1400:0);
+    itens=[['Estrutura',M(st.estL).n],['Fundo',M(st.fundoL).n],['Portas',PORTA.find(p=>p.id===st.portaL).n],['Gavetas',M(st.gavL).n],['LED',st.ledL?'Sim':'Não']];}
+  if(st.aba==='esc'){amb='Home office';base=11500+M(st.ripE).p*3+M(st.mesaE).p*2+M(st.armE).p*3+(st.ledE?900:0);
+    itens=[['Painel',M(st.ripE).n],['Mesa',M(st.mesaE).n],['Estante e armário',M(st.armE).n],['LED',st.ledE?'Sim':'Não']];}
+  $('#resumoLista').innerHTML=itens.map(([a,b])=>`<div><dt>${a}</dt><dd>${b}</dd></div>`).join('');
+  $('#valor').textContent=fmt(base*.88)+' a '+fmt(base*1.14);
+  $('#rotuloAmb').textContent=amb;
+  const msg=`Olá! Montei este projeto no site da Vértice e quero um orçamento.\n\nAmbiente: ${amb}\n`+itens.map(([a,b])=>`${a}: ${b}`).join('\n')+`\n\nEstimativa do site: ${$('#valor').textContent}`;
+  $('#zap').href='https://wa.me/5554999999999?text='+encodeURIComponent(msg);
+}
+$$('.abas button').forEach(b=>b.addEventListener('click',()=>{st.aba=b.dataset.aba;$$('.abas button').forEach(x=>x.setAttribute('aria-selected',x===b));$$('.vista').forEach(v=>v.classList.toggle('on',v.id==={coz:'svCoz',clo:'svClo',esc:'svEsc'}[st.aba]));$$('.grupos').forEach(gr=>gr.classList.toggle('on',gr.dataset.grupos===st.aba));render()}));
+$$('.diaNoite button').forEach(b=>b.addEventListener('click',()=>{st.noite=b.dataset.luz==='noite';render()}));
+render();
+
+/* ============ projetos + lightbox ============ */
+const PROJ=[
+  ['cozinha-ampla','Cozinha integrada','Preto texturizado, carvalho e mármore',''],
+  ['closet','Closet','Grafite com prateleiras em carvalho e LED','alto'],
+  ['dormitorio','Dormitório','Painel em carvalho com LED na cabeceira',''],
+  ['sala-painel','Sala de estar','Painel e porta camuflada em nogueira',''],
+  ['hall-armarios','Hall de entrada','Armários ripados em carvalho e preto','alto'],
+  ['escritorio','Bancada de estudo','Fendi com nichos laqueados',''],
+  ['banheiro','Banheiro','Gabinete suspenso com tampo em pedra','alto'],
+  ['cozinha-cinza','Cozinha','Cinza fosco com mesa em carvalho',''],
+  ['penteadeira','Penteadeira','Bancada suspensa em carvalho','alto'],
+  ['sala-tv','Sala de TV','Painel em carvalho e marcenaria preta','']
+];
+const trilho=$('#trilho');
+PROJ.forEach(([img,t,d,cls],i)=>{const b=document.createElement('button');b.className='card '+cls;b.type='button';b.setAttribute('aria-label',`Abrir ${t}`);
+  b.innerHTML=`<div class="img"><img src="img/${img}.webp" alt="${t}: ${d}" loading="lazy"><span class="abrir" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2H2v4M10 2h4v4M6 14H2v-4M10 14h4v-4"/></svg></span></div><div class="legenda"><b>${t}</b><span>${d}</span></div>`;
+  b.addEventListener('click',()=>abrirLb(i));trilho.appendChild(b)});
+let lbi=0;const lb=$('#lb');
+function mostra(i){lbi=(i+PROJ.length)%PROJ.length;const [img,t,d]=PROJ[lbi];const im=$('#lbImg');im.classList.add('saindo');setTimeout(()=>{im.src=`img/${img}.webp`;im.alt=`${t}: ${d}`;$('#lbTit').textContent=t;$('#lbDesc').textContent=d;$('#lbCont').textContent=`${lbi+1} / ${PROJ.length}`;(im.decode?im.decode():Promise.resolve()).catch(()=>{}).then(()=>im.classList.remove('saindo'))},180)}
+let ultimoFoco=null;
+function abrirLb(i){ultimoFoco=document.activeElement;mostra(i);lb.classList.add('on');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';setTimeout(()=>$('#lbFechar').focus(),50)}
+function fecharLb(){lb.classList.remove('on');lb.setAttribute('aria-hidden','true');document.body.style.overflow='';if(ultimoFoco)ultimoFoco.focus()}
+$('#lbFechar').addEventListener('click',fecharLb);$('#lbAnt').addEventListener('click',()=>mostra(lbi-1));$('#lbProx').addEventListener('click',()=>mostra(lbi+1));
+lb.addEventListener('click',e=>{if(e.target===lb||e.target.tagName==='FIGURE')fecharLb()});
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')fecharLb();if(e.key==='ArrowRight')mostra(lbi+1);if(e.key==='ArrowLeft')mostra(lbi-1)});
+let tx0=null;lb.addEventListener('touchstart',e=>tx0=e.touches[0].clientX,{passive:true});lb.addEventListener('touchend',e=>{if(tx0===null)return;const dx=e.changedTouches[0].clientX-tx0;if(Math.abs(dx)>50)mostra(lbi+(dx<0?1:-1));tx0=null});
+
+/* ============ materiais ============ */
+const MATINFO=[['nogueira','Nogueira','Veio marcado e tom chocolate. Fica bem com pedra clara e latão.'],['carvalho','Carvalho','Tom mel, veio reto. O mais versátil da linha.'],['carvalho-claro','Carvalho claro','Quase branco, deixa ambientes pequenos mais amplos.'],['preto','Preto texturizado','Fosco, com relevo leve que não marca digitais.'],['marmore','Mármore','Branco com veios cinza, para tampos e revestimentos.']];
+$('#mats').innerHTML=MATINFO.map(([t,n,d])=>`<div class="mat" tabindex="0" style="background-image:url(${TEX[t][0]})"><div class="info"><b>${n}</b><span>${d}</span></div></div>`).join('');
+$('#cores').insertAdjacentHTML('beforeend',MATS.filter(m=>!m.t).map(m=>`<i title="${m.n}" style="background:${m.c}"></i>`).join('')+'<span>e outras cores sob consulta.</span>');
+
+/* ============ topo ============ */
+const topo=$('#topo');let ultY=0;
+function onScroll(){const y=scrollY;topo.classList.toggle('solido',y>innerHeight*.85);topo.classList.toggle('esconde',y>ultY&&y>innerHeight&&!lb.classList.contains('on'));ultY=y}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* ============ animações (GSAP) ============ */
+const passos=$$('#passosEsboco li');
+function setPasso(p){passos.forEach((li,i)=>li.classList.toggle('on',p>=[0,.22,.5,.78][i]));$('#seloEsboco').textContent=p>.82?'Ambiente entregue':'Desenho técnico'}
+function prepTraco(){$$('#traco path,#traco circle').forEach(p=>{const L=(p.getTotalLength?p.getTotalLength():1000)+2;p.style.strokeDasharray=L;p.style.strokeDashoffset=L;p.dataset.L=L})}
+function desenha(grupo,k){$$(`#${grupo} path,#${grupo} circle`).forEach(p=>p.style.strokeDashoffset=p.dataset.L*(1-k))}
+const cl=(x)=>Math.max(0,Math.min(1,x));
+function esbocoProgress(p){desenha('tr1',cl(p/.2));desenha('tr2',cl((p-.18)/.32));desenha('tr3',cl((p-.45)/.3));$$('#traco .cotat').forEach(t=>t.style.opacity=cl((p-.4)/.1)*(1-cl((p-.85)/.1)));
+  const r=cl((p-.74)/.2);$('#fotoReal').style.clipPath=`inset(0 ${(100-r*100).toFixed(2)}% 0 0)`;$('#traco').style.opacity=1-cl((p-.86)/.12)*.85;setPasso(p)}
+prepTraco();
+
+if(window.gsap&&window.ScrollTrigger&&!reduz){
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from('.hero h1 .l>span',{yPercent:110,duration:1.3,ease:'expo.out',stagger:.09,delay:.15});
+  gsap.from('.hero .eyebrow,.hero p,.hero .acoes,.hero .ficha',{opacity:0,y:18,duration:1,ease:'power3.out',stagger:.08,delay:.55});
+  gsap.to('.hero .foto',{yPercent:14,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.utils.toArray('.intro .colunas div, .intro h2, .intro .lead').forEach(e=>gsap.from(e,{opacity:0,y:28,duration:1,ease:'power3.out',scrollTrigger:{trigger:e,start:'top 86%'}}));
+  // esboço fixado
+  const desk=matchMedia('(min-width: 861px)').matches;
+  if(desk){ScrollTrigger.create({trigger:'.esboco',start:'top top',end:'+=220%',pin:'.esboco .pin',scrub:true,onUpdate:s=>esbocoProgress(s.progress)});}
+  else{ScrollTrigger.create({trigger:'#quadro',start:'top 85%',end:'bottom 25%',scrub:true,onUpdate:s=>esbocoProgress(s.progress)});}
+  esbocoProgress(0);
+  // projetos: rolagem horizontal no desktop
+  if(desk){const dist=()=>trilho.scrollWidth-innerWidth;gsap.to(trilho,{x:()=>-dist(),ease:'none',scrollTrigger:{trigger:'.projetos',start:'top top',end:()=>'+='+dist(),pin:true,scrub:1,invalidateOnRefresh:true}});}
+  gsap.utils.toArray('.card img').forEach(im=>gsap.fromTo(im,{scale:1.15},{scale:1.02,ease:'none',scrollTrigger:{trigger:im,containerAnimation:undefined,start:'top bottom',end:'bottom top',scrub:true}}));
+  // materiais
+  gsap.from('.mat',{opacity:0,y:40,duration:1,ease:'power3.out',stagger:.08,scrollTrigger:{trigger:'#mats',start:'top 82%'}});
+  // processo
+  gsap.to('.linha-tempo .trilha i',{scaleX:1,ease:'none',scrollTrigger:{trigger:'#linhaTempo',start:'top 75%',end:'bottom 70%',scrub:true}});
+  gsap.utils.toArray('.etapa').forEach((e,i)=>gsap.from(e,{opacity:0,y:40,duration:1,ease:'power3.out',delay:i*.06,scrollTrigger:{trigger:e,start:'top 85%'}}));
+  gsap.from('.palco',{opacity:0,y:30,duration:1.1,ease:'power3.out',scrollTrigger:{trigger:'.palco',start:'top 85%'}});
+  addEventListener('load',()=>ScrollTrigger.refresh());
+}else{
+  esbocoProgress(1);
+}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>CONREC Sites</title>
+<meta name="description" content="Sites profissionais para pequenas empresas a partir de R$ 497, prontos em até 5 dias. Fale com um consultor no WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap">
+<style>
+:root{
+  --vermelho:#BE1D2F; --vivo:#DD172B; --bordo:#681821; --profundo:#940C1A;
+  --preto:#141414; --grafite:#212121; --linha:#2E2E2E; --suave:#B3B3B3;
+  --papel:#F3F1ED; --papel-2:#E9E6E0; --tinta:#161616; --cinza:#5E5B57; --branco:#FFFFFF;
+  --display:"Poppins","Helvetica Neue",Arial,sans-serif;
+  --corpo:"Geist","Helvetica Neue",Arial,sans-serif;
+  --wrap:1180px; --gut:clamp(16px,4vw,40px);
+  --r:18px; --r-lg:28px;
+  --ease:cubic-bezier(.2,.8,.2,1);
+  --wa:#1FAF5A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--papel);color:var(--tinta);font-family:var(--corpo);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--vivo);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.03em;line-height:1.04}
+.eyebrow{font-family:var(--corpo);font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--vermelho);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor}
+section{position:relative}
+.sec{padding:clamp(72px,10vw,128px) 0}
+.sec-head{display:grid;gap:18px;max-width:760px;margin-bottom:clamp(36px,5vw,56px)}
+.sec-head h2{font-size:clamp(34px,5vw,58px)}
+.sec-head p{font-size:clamp(17px,1.6vw,19px);color:var(--cinza);max-width:58ch}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font-family:var(--display);font-weight:600;font-size:16px;letter-spacing:-.01em;text-decoration:none;transition:transform .25s var(--ease),background .25s,box-shadow .25s,color .25s;white-space:nowrap}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-wa{background:var(--vermelho);color:#fff}
+.btn-wa:hover{background:var(--vivo);transform:translateY(-1px)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.28);color:#fff}
+.btn-ghost:hover{border-color:#fff}
+.btn-dark{background:var(--tinta);color:#fff}
+.btn-dark:hover{background:#000;transform:translateY(-1px)}
+.btn-line{border:1.5px solid rgba(22,22,22,.2);color:var(--tinta)}
+.btn-line:hover{border-color:var(--tinta)}
+
+/* header */
+.top{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,box-shadow .3s,backdrop-filter .3s}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.top.solid{background:rgba(20,20,20,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.logo img{height:30px;width:auto}
+.nav{display:flex;gap:28px;font-size:15px;color:#d8d6d2}
+.nav a{text-decoration:none;transition:color .2s}
+.nav a:hover{color:#fff}
+.top .btn{min-height:44px;padding:0 18px;font-size:15px}
+@media(max-width:900px){.nav{display:none}}
+@media(max-width:520px){.top .btn .long{display:none}.hero .btn,.final .btn,.plan .btn,.faq .btn,.port .after .btn{white-space:normal;text-align:center;line-height:1.25;padding-top:12px;padding-bottom:12px;width:100%}}
+.hero .wrap>*,.final .wrap>*,.faq .cols>*{min-width:0}
+
+/* hero */
+.hero{background:var(--preto);color:#fff;padding:clamp(120px,15vw,168px) 0 clamp(64px,8vw,96px);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{font-size:clamp(38px,4.4vw,62px);margin:18px 0 16px}
+.hero h1 em{font-style:normal;color:var(--vivo)}
+.hero .sub{font-size:clamp(17px,1.5vw,20px);color:#cfccc7;max-width:46ch}
+.price{display:flex;flex-direction:column;gap:2px;margin:4px 0 26px;padding:18px 0 0;border-top:1px solid rgba(255,255,255,.14)}
+.price .lbl{font-family:var(--display);font-weight:600;font-size:clamp(28px,3.2vw,44px);letter-spacing:-.025em;line-height:1.05;color:#fff}
+.price .val{font-family:var(--display);font-weight:700;font-size:clamp(68px,7.4vw,112px);letter-spacing:-.045em;line-height:.95;color:var(--vivo)}
+.price .val small{font-size:.36em;font-weight:600;margin-right:8px;vertical-align:.95em;color:#fff;letter-spacing:-.02em}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero .note{margin-top:18px;font-size:14px;color:#9c9893;display:flex;gap:8px;align-items:center}
+.hero .note i{width:8px;height:8px;border-radius:50%;background:var(--wa);display:block}
+.stack{position:relative;aspect-ratio:1/0.86}
+.stack .dk{position:absolute;inset:0 6% 14% 0;border-radius:14px;overflow:hidden;background:#222;box-shadow:0 40px 80px -30px rgba(0,0,0,.8);border:1px solid rgba(255,255,255,.08)}
+.stack .dk .bar{height:26px;background:#2a2a2a;display:flex;align-items:center;gap:6px;padding:0 12px}
+.stack .dk .bar i{width:8px;height:8px;border-radius:50%;background:#4a4a4a}
+.stack .dk img{width:100%;height:calc(100% - 26px);object-fit:cover;object-position:top}
+.stack .ph{position:absolute;right:0;bottom:0;width:30%;aspect-ratio:390/844;border-radius:26px;background:#0b0b0b;padding:7px;box-shadow:0 30px 60px -20px rgba(0,0,0,.9)}
+.stack .ph img{width:100%;height:100%;border-radius:20px;object-fit:cover;object-position:top}
+.stack .swap{transition:opacity .6s var(--ease)}
+.hero-dots{position:absolute;left:0;bottom:-34px;display:flex;gap:8px}
+.hero-dots i{width:18px;height:3px;border-radius:2px;background:#444;display:block;transition:background .3s,width .3s}
+.hero-dots i.on{background:var(--vivo);width:30px}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.stack{max-width:560px;margin-top:8px}}
+
+/* problema */
+.why{background:var(--papel)}
+.why .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid rgba(22,22,22,.06);border-radius:var(--r);padding:30px 28px}
+.why .card .n{font-family:var(--display);font-weight:600;font-size:15px;color:var(--vermelho);margin-bottom:22px}
+.why .card h3{font-size:24px;margin-bottom:12px;letter-spacing:-.02em}
+.why .card p{color:var(--cinza);font-size:16px}
+@media(max-width:860px){.why .grid{grid-template-columns:1fr}}
+
+/* portfólio */
+.port{background:var(--preto);color:#fff}
+.port .sec-head p{color:#bdb9b3}
+.port .sec-head .eyebrow{color:var(--vivo)}
+.pgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.pc{position:relative;grid-column:span 2;border-radius:var(--r-lg);background:var(--grafite);border:1px solid rgba(255,255,255,.07);overflow:hidden;cursor:pointer;text-align:left;display:flex;flex-direction:column;transition:transform .4s var(--ease),border-color .3s}
+.pc:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.18)}
+.pc.big{grid-column:span 3}
+.pc .shot{position:relative;margin:14px 14px 0;border-radius:12px 12px 0 0;overflow:hidden;background:#2a2a2a;aspect-ratio:16/10}
+.pc .shot .bar{position:absolute;inset:0 0 auto 0;height:22px;background:#303030;display:flex;align-items:center;gap:5px;padding:0 10px;z-index:2}
+.pc .shot .bar i{width:7px;height:7px;border-radius:50%;background:#555}
+.pc .shot img{position:absolute;inset:22px 0 0;width:100%;height:calc(100% - 22px);object-fit:cover;object-position:top;transition:transform 1.2s var(--ease)}
+.pc:hover .shot img{transform:scale(1.03)}
+.pc .mob{position:absolute;right:16px;bottom:-30px;width:24%;aspect-ratio:390/844;border-radius:16px;background:#0b0b0b;padding:4px;z-index:3;transition:transform .5s var(--ease);box-shadow:0 20px 40px -14px rgba(0,0,0,.9)}
+.pc .mob img{width:100%;height:100%;border-radius:12px;object-fit:cover;object-position:top}
+.pc:hover .mob{transform:translateY(-16px)}
+.pc .meta{position:relative;z-index:4;background:var(--grafite);padding:20px 22px 22px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-top:auto;border-top:1px solid rgba(255,255,255,.06)}
+.pc .meta small{display:block;font-size:13px;color:var(--suave);margin-bottom:4px}
+.pc .meta b{font-family:var(--display);font-weight:600;font-size:21px;letter-spacing:-.02em}
+.pc .go{flex:none;display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:#fff;border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:9px 14px;transition:background .25s,border-color .25s}
+.pc:hover .go{background:var(--vermelho);border-color:var(--vermelho)}
+.pc .feat{position:absolute;top:28px;left:28px;z-index:4;font-size:12px;font-weight:500;background:rgba(20,20,20,.8);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:5px 10px;backdrop-filter:blur(6px)}
+.port .after{margin-top:40px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:24px 28px;border:1px solid rgba(255,255,255,.1);border-radius:var(--r)}
+.port .after p{color:#cfccc7;max-width:56ch}
+@media(max-width:980px){.pgrid{grid-template-columns:repeat(2,1fr)}.pc,.pc.big{grid-column:span 1}}
+@media(max-width:620px){.pgrid{grid-template-columns:1fr}.pc .mob{width:26%}}
+
+/* viewer */
+.vw{position:fixed;inset:0;z-index:100;background:#0e0e0e;display:none;flex-direction:column}
+.vw.open{display:flex;animation:fade .3s var(--ease)}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.vw-top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px var(--gut);color:#fff;border-bottom:1px solid rgba(255,255,255,.08);flex-wrap:wrap}
+.vw-t small{display:block;font-size:12px;color:var(--suave)}
+.vw-t b{font-family:var(--display);font-weight:600;font-size:18px;letter-spacing:-.01em}
+.seg{display:flex;background:#232323;border-radius:999px;padding:4px}
+.seg button{padding:8px 16px;border-radius:999px;font-size:14px;color:#cfccc7;display:flex;gap:8px;align-items:center}
+.seg button svg{width:16px;height:16px}
+.seg button.on{background:#fff;color:var(--tinta)}
+.vw-act{display:flex;gap:8px;align-items:center}
+.ib{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.18);display:grid;place-items:center;color:#fff;transition:background .2s}
+.ib:hover{background:rgba(255,255,255,.08)}
+.ib svg{width:18px;height:18px}
+.vw .btn{min-height:44px;font-size:15px;padding:0 18px}
+.vw-stage{flex:1;position:relative;overflow:hidden;display:grid;place-items:center;padding:18px}
+.frame{position:absolute;left:50%;top:50%;transform-origin:center center;background:#fff;overflow:hidden;box-shadow:0 40px 100px -30px rgba(0,0,0,.9)}
+.frame.desk{border-radius:12px;border:1px solid #333}
+.frame.desk .bar{height:34px;background:#262626;display:flex;align-items:center;gap:7px;padding:0 14px}
+.frame.desk .bar i{width:10px;height:10px;border-radius:50%;background:#4a4a4a}
+.frame.desk .bar span{margin-left:14px;flex:1;max-width:420px;height:22px;border-radius:6px;background:#1a1a1a;color:#8f8b86;font-size:12px;display:flex;align-items:center;padding:0 10px}
+.frame.mob{border-radius:48px;background:#0b0b0b;padding:12px}
+.frame.mob .bar{display:none}
+.frame iframe{display:block;border:0;background:#fff}
+.frame.mob iframe{border-radius:36px}
+.vw-load{position:absolute;inset:0;display:grid;place-items:center;color:#9c9893;font-size:14px;pointer-events:none}
+.vw-hint{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-size:13px;color:#8f8b86;white-space:nowrap}
+@media(max-width:760px){.vw-top{gap:10px}.vw-t{order:1;flex:1 1 60%}.vw-act{order:2}.seg{order:3}.vw .btn{order:4;flex:1}.vw .btn .long{display:none}}
+
+/* prazo */
+.prazo{background:var(--papel)}
+.prazo .big{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,72px);align-items:end;margin-bottom:56px}
+.prazo .num{font-family:var(--display);font-weight:600;font-size:clamp(120px,18vw,240px);line-height:.8;letter-spacing:-.06em;color:var(--vermelho)}
+.prazo .num small{display:block;font-size:.13em;letter-spacing:-.01em;color:var(--tinta);margin-top:18px;line-height:1.1}
+.days{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:2px solid var(--tinta)}
+.day{padding:22px 18px 0 0;position:relative}
+.day::before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--papel);border:2px solid var(--tinta)}
+.day:last-child::before{background:var(--vermelho);border-color:var(--vermelho)}
+.day small{font-size:13px;color:var(--cinza);font-weight:500}
+.day b{display:block;font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:-.02em;margin:6px 0 6px}
+.day p{font-size:15px;color:var(--cinza)}
+.prazo .foot{margin-top:40px;font-size:15px;color:var(--cinza)}
+@media(max-width:860px){.prazo .big{grid-template-columns:1fr}.days{grid-template-columns:1fr;border-top:0;border-left:2px solid var(--tinta)}.day{padding:0 0 26px 26px}.day::before{top:4px;left:-7px}}
+
+/* planos */
+.planos{background:var(--papel-2)}
+.pl{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plan{background:#fff;border-radius:var(--r-lg);padding:32px 28px;display:flex;flex-direction:column;border:1px solid rgba(22,22,22,.06)}
+.plan.mid{background:var(--preto);color:#fff;border-color:var(--preto)}
+.plan h3{font-size:24px;letter-spacing:-.02em}
+.plan .for{font-size:15px;color:var(--cinza);margin:8px 0 22px;min-height:46px}
+.plan.mid .for{color:#bdb9b3}
+.plan .pv{font-family:var(--display);font-weight:600;font-size:46px;letter-spacing:-.04em;line-height:1}
+.plan .pv small{font-size:15px;font-weight:500;letter-spacing:0;color:var(--cinza);display:block;margin-bottom:6px}
+.plan.mid .pv small{color:#bdb9b3}
+.plan ul{list-style:none;margin:26px 0 28px;display:grid;gap:11px;font-size:15.5px}
+.plan li{display:flex;gap:10px;align-items:flex-start}
+.plan li svg{flex:none;width:18px;height:18px;margin-top:3px;color:var(--vermelho)}
+.plan.mid li svg{color:var(--vivo)}
+.plan li.no{color:var(--cinza)}
+.plan li.no svg{color:#aaa}
+.plan .btn{margin-top:auto;width:100%}
+.plan .tag{align-self:flex-start;font-size:12px;font-weight:500;border-radius:999px;padding:5px 10px;margin-bottom:16px;background:var(--vermelho);color:#fff}
+.pl-note{margin-top:26px;font-size:15px;color:var(--cinza);display:flex;gap:10px;align-items:flex-start;max-width:80ch}
+.pl-note svg{flex:none;width:18px;height:18px;margin-top:3px}
+@media(max-width:980px){.pl{grid-template-columns:1fr}.plan .for{min-height:0}}
+
+/* como funciona */
+.how{background:var(--papel)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{border-top:1px solid rgba(22,22,22,.18);padding-top:22px}
+.step .k{font-family:var(--display);font-weight:600;font-size:15px;color:var(--vermelho)}
+.step h3{font-size:22px;margin:12px 0 10px;letter-spacing:-.02em}
+.step p{font-size:15.5px;color:var(--cinza)}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* incluso */
+.inc{background:var(--papel);padding-top:0}
+.inc .box{background:#fff;border-radius:var(--r-lg);padding:clamp(28px,4vw,48px);display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,4vw,56px);border:1px solid rgba(22,22,22,.06)}
+.inc h2{font-size:clamp(30px,3.8vw,44px)}
+.inc ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px 28px}
+.inc li{display:flex;gap:12px;font-size:16px}
+.inc li svg{flex:none;width:20px;height:20px;color:var(--vermelho);margin-top:2px}
+@media(max-width:860px){.inc .box{grid-template-columns:1fr}.inc ul{grid-template-columns:1fr}}
+
+/* faq */
+.faq{background:var(--papel-2)}
+.faq .cols{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,72px)}
+.faq details{border-bottom:1px solid rgba(22,22,22,.14)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:-.02em;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:14px;height:14px;margin-top:-7px;background:linear-gradient(currentColor,currentColor) center/14px 2px no-repeat,linear-gradient(currentColor,currentColor) center/2px 14px no-repeat;transition:transform .3s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--cinza);max-width:62ch}
+@media(max-width:860px){.faq .cols{grid-template-columns:1fr}}
+
+/* cta final */
+.final{background:var(--vermelho);color:#fff;text-align:left}
+.final .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:end}
+.final h2{font-size:clamp(38px,5.6vw,72px)}
+.final p{font-size:18px;color:#f5d6d9;margin-top:18px;max-width:46ch}
+.final .btn{background:#fff;color:var(--vermelho);min-height:60px;font-size:17px;padding:0 28px}
+.final .btn:hover{background:var(--preto);color:#fff}
+.final .side{display:grid;gap:14px;justify-items:start}
+.final .side small{color:#f5d6d9;font-size:14px}
+@media(max-width:860px){.final .wrap{grid-template-columns:1fr}}
+
+footer{background:var(--preto);color:#bdb9b3;padding:48px 0 110px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer img{height:26px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+footer .links{display:flex;gap:22px;flex-wrap:wrap}
+
+/* whatsapp flutuante */
+.fab{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;text-decoration:none;border-radius:999px;padding:0 20px 0 16px;height:56px;font-family:var(--display);font-weight:600;font-size:15px;box-shadow:0 14px 30px -10px rgba(0,0,0,.45);transition:transform .25s var(--ease)}
+.fab:hover{transform:translateY(-2px)}
+.fab svg{width:26px;height:26px}
+@media(max-width:520px){.fab{left:16px;right:16px;justify-content:center}}
+.vw.open ~ .fab{display:none}
+
+/* revelação */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></symbol>
+  <symbol id="ok" viewBox="0 0 20 20"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 10.5l4 4 8-9"/></symbol>
+  <symbol id="no" viewBox="0 0 20 20"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M5 5l10 10M15 5L5 15"/></symbol>
+  <symbol id="info" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9v5M10 6.2v.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="arr" viewBox="0 0 20 20"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 10h12M11 5l5 5-5 5"/></symbol>
+  <symbol id="prev" viewBox="0 0 20 20"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 4l-6 6 6 6"/></symbol>
+  <symbol id="next" viewBox="0 0 20 20"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 4l6 6-6 6"/></symbol>
+  <symbol id="x" viewBox="0 0 20 20"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M5 5l10 10M15 5L5 15"/></symbol>
+  <symbol id="desk" viewBox="0 0 20 20"><rect x="2" y="3.5" width="16" height="10.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 17h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="cel" viewBox="0 0 20 20"><rect x="6" y="2" width="8" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="CONREC"><img src="brand/conrec-logo-horizontal-negativo.svg" alt="CONREC"></a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#modelos">Modelos</a><a href="#prazo">Prazo</a><a href="#planos">Planos</a><a href="#como">Como funciona</a><a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn btn-wa" data-wa="Olá, CONREC! Quero um site para minha empresa." href="#"><svg><use href="#wa"/></svg><span>Falar com <span class="long">um </span>consultor</span></a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" style="color:#e88a93">Criação de sites · CONREC</p>
+      <h1>Seu site profissional no ar em <em>até 5 dias.</em></h1>
+      <p class="sub">Site bonito, rápido no celular e pensado para o cliente chamar você no WhatsApp. Você não precisa entender nada de site: um consultor cuida de tudo com você pelo WhatsApp.</p>
+      <div class="price"><span class="lbl">Sites a partir de</span><span class="val"><small>R$</small>497</span></div>
+      <div class="ctas">
+        <a class="btn btn-wa" data-wa="Olá, CONREC! Quero um site a partir de R$ 497. Pode me explicar como funciona?" href="#"><svg><use href="#wa"/></svg>Falar com um consultor no WhatsApp</a>
+        <a class="btn btn-ghost" href="#modelos">Ver modelos</a>
+      </div>
+      <p class="note"><i></i>Para contratar, é só chamar no WhatsApp. Sem formulário e sem compromisso.</p>
+    </div>
+    <div class="stack" aria-hidden="true">
+      <div class="dk"><div class="bar"><i></i><i></i><i></i></div><img class="swap" id="hd" src="posters/planejados-d.webp" alt=""></div>
+      <div class="ph"><img class="swap" id="hm" src="posters/planejados-m.webp" alt=""></div>
+      <div class="hero-dots" id="hdots"></div>
+    </div>
+  </div>
+</section>
+
+<section class="why sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Por que ter um site</p>
+      <h2>Quem procura o seu serviço precisa encontrar você, e não o concorrente.</h2>
+      <p>Antes de chamar, o cliente pesquisa. Um perfil no Instagram ajuda, mas um site mostra que a empresa é séria e leva a pessoa direto para a conversa.</p>
+    </div>
+    <div class="grid">
+      <div class="card rv"><p class="n">01</p><h3>Aparecer na pesquisa</h3><p>Seu nome, seus serviços e seu endereço organizados para o Google entender o que você faz e onde atende.</p></div>
+      <div class="card rv"><p class="n">02</p><h3>Passar confiança antes da conversa</h3><p>Fotos do seu trabalho, preços ou faixas de valor e respostas para as dúvidas mais comuns. O cliente chega decidido.</p></div>
+      <div class="card rv"><p class="n">03</p><h3>Levar direto ao WhatsApp</h3><p>Botões em todo o site abrem a conversa com uma mensagem pronta. Menos "oi, tudo bem?", mais pedido de orçamento.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="port sec" id="modelos">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Modelos por segmento</p>
+      <h2>Veja como fica o site do seu ramo.</h2>
+      <p>Abra qualquer modelo e navegue como se fosse o seu cliente, no computador ou no celular. O seu site sai com a sua marca, suas fotos e seus serviços.</p>
+    </div>
+    <div class="pgrid" id="pgrid"></div>
+    <div class="after rv">
+      <p>Não achou o seu ramo? O mesmo cuidado vale para qualquer negócio: clínica, loja, restaurante, prestador de serviço.</p>
+      <a class="btn btn-wa" data-wa="Olá, CONREC! Vi os modelos e quero um site para o meu ramo." href="#"><svg><use href="#wa"/></svg>Falar com um consultor</a>
+    </div>
+  </div>
+</section>
+
+<section class="prazo sec" id="prazo">
+  <div class="wrap">
+    <div class="big rv">
+      <div class="num">5<small>dias, no máximo.</small></div>
+      <div class="sec-head" style="margin:0">
+        <p class="eyebrow">Prazo de entrega</p>
+        <h2>Seu site pronto em até 5 dias úteis.</h2>
+        <p>Do primeiro "oi" no WhatsApp ao site no ar. Você acompanha cada etapa e aprova antes de publicar.</p>
+      </div>
+    </div>
+    <div class="days rv">
+      <div class="day"><small>Dia 1</small><b>Conversa</b><p>O consultor entende seu negócio e pede logo, fotos e serviços.</p></div>
+      <div class="day"><small>Dia 2</small><b>Estrutura e textos</b><p>Montamos as seções e te ajudamos a definir o que escrever em cada uma.</p></div>
+      <div class="day"><small>Dia 3</small><b>Design</b><p>O site ganha a cara da sua marca, no computador e no celular.</p></div>
+      <div class="day"><small>Dia 4</small><b>Seus ajustes</b><p>Você vê o site pronto e pede as mudanças que quiser.</p></div>
+      <div class="day"><small>Dia 5</small><b>No ar</b><p>Publicamos no seu endereço e conferimos tudo funcionando.</p></div>
+    </div>
+    <p class="foot rv">O prazo começa quando recebemos as informações e fotos do seu negócio. Sites com interações sob medida podem levar mais tempo, e o consultor informa antes de começar.</p>
+  </div>
+</section>
+
+<section class="planos sec" id="planos">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Planos</p>
+      <h2>Escolha o tamanho do seu site.</h2>
+      <p>Todos os planos incluem design feito por nós, versão para celular e botão de WhatsApp. Para contratar, fale com um consultor.</p>
+    </div>
+    <div class="pl">
+      <div class="plan rv">
+        <h3>Essencial</h3>
+        <p class="for">Para quem precisa de presença profissional rápida.</p>
+        <p class="pv"><small>a partir de</small>R$ 497</p>
+        <ul>
+          <li><svg><use href="#ok"/></svg>Site de uma página, com até 6 seções</li>
+          <li><svg><use href="#ok"/></svg>Orientação para os textos: te ajudamos a definir o que escrever</li>
+          <li><svg><use href="#ok"/></svg>Botão de WhatsApp com mensagem pronta</li>
+          <li><svg><use href="#ok"/></svg>Mapa, horário e contatos</li>
+          <li><svg><use href="#ok"/></svg>Endereço seguro (cadeado)</li>
+          <li><svg><use href="#ok"/></svg>2 rodadas de ajustes</li>
+          <li class="no"><svg><use href="#no"/></svg>Loja virtual e sistemas</li>
+        </ul>
+        <a class="btn btn-line" data-wa="Olá, CONREC! Tenho interesse no plano Essencial (a partir de R$ 497)." href="#"><svg><use href="#wa"/></svg>Quero o Essencial</a>
+      </div>
+      <div class="plan mid rv">
+        <span class="tag">Para a maioria dos negócios</span>
+        <h3>Profissional</h3>
+        <p class="for">Para mostrar serviços, trabalhos e equipe com mais detalhe.</p>
+        <p class="pv"><small>a partir de</small>R$ 900</p>
+        <ul>
+          <li><svg><use href="#ok"/></svg>Tudo do Essencial</li>
+          <li><svg><use href="#ok"/></svg>Até 5 páginas ou seções completas</li>
+          <li><svg><use href="#ok"/></svg>Galeria de trabalhos e tabela de serviços</li>
+          <li><svg><use href="#ok"/></svg>Cadastro no Perfil da Empresa no Google</li>
+          <li><svg><use href="#ok"/></svg>Perguntas frequentes e formulário</li>
+          <li><svg><use href="#ok"/></svg>2 rodadas de ajustes</li>
+        </ul>
+        <a class="btn btn-wa" data-wa="Olá, CONREC! Tenho interesse no plano Profissional (a partir de R$ 900)." href="#"><svg><use href="#wa"/></svg>Quero o Profissional</a>
+      </div>
+      <div class="plan rv">
+        <h3>Sob medida</h3>
+        <p class="for">Para quem quer que o cliente experimente antes de comprar.</p>
+        <p class="pv"><small>a partir de</small>R$ 1.800</p>
+        <ul>
+          <li><svg><use href="#ok"/></svg>Tudo do Profissional</li>
+          <li><svg><use href="#ok"/></svg>Interações como as dos modelos: agendamento, simulador, configurador, montagem de pacote</li>
+          <li><svg><use href="#ok"/></svg>Animações e fotos tratadas</li>
+          <li><svg><use href="#ok"/></svg>Projeto definido com você</li>
+          <li><svg><use href="#ok"/></svg>Prazo combinado na conversa</li>
+        </ul>
+        <a class="btn btn-line" data-wa="Olá, CONREC! Quero um site sob medida, com interações." href="#"><svg><use href="#wa"/></svg>Quero um sob medida</a>
+      </div>
+    </div>
+    <p class="pl-note rv"><svg><use href="#info"/></svg>Domínio (www.suaempresa.com.br) e hospedagem: o consultor explica as opções e os custos na conversa, antes de você fechar qualquer coisa.</p>
+  </div>
+</section>
+
+<section class="how sec" id="como">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Como funciona</p>
+      <h2>Quatro passos, tudo pelo WhatsApp.</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><p class="k">1</p><h3>Você chama</h3><p>Clica em qualquer botão do site e fala direto com um consultor da CONREC.</p></div>
+      <div class="step rv"><p class="k">2</p><h3>Conversa rápida</h3><p>Ele entende o seu negócio, indica o plano certo e passa o valor fechado.</p></div>
+      <div class="step rv"><p class="k">3</p><h3>Você aprova</h3><p>Enviamos o site pronto para você ver e pedir ajustes antes de publicar.</p></div>
+      <div class="step rv"><p class="k">4</p><h3>No ar</h3><p>Seu site publicado, com o link pronto para colocar no Instagram, no cartão e no Google.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="inc sec">
+  <div class="wrap">
+    <div class="box rv">
+      <div>
+        <p class="eyebrow">O que está incluso</p>
+        <h2 style="margin-top:16px">Você só precisa mandar as fotos e falar do seu negócio.</h2>
+      </div>
+      <ul>
+        <li><svg><use href="#ok"/></svg>Design feito por designers, não modelo pronto</li>
+        <li><svg><use href="#ok"/></svg>Ajuda para montar os textos do seu ramo</li>
+        <li><svg><use href="#ok"/></svg>Versão para celular, tablet e computador</li>
+        <li><svg><use href="#ok"/></svg>Botões de WhatsApp com mensagem pronta</li>
+        <li><svg><use href="#ok"/></svg>Carregamento rápido</li>
+        <li><svg><use href="#ok"/></svg>Estrutura básica para o Google</li>
+        <li><svg><use href="#ok"/></svg>Endereço seguro (cadeado)</li>
+        <li><svg><use href="#ok"/></svg>Acompanhamento até o site ir ao ar</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="faq sec" id="duvidas">
+  <div class="wrap cols">
+    <div class="sec-head rv" style="margin:0">
+      <p class="eyebrow">Dúvidas</p>
+      <h2>Perguntas que todo mundo faz antes de fechar.</h2>
+      <p>Ficou alguma? O consultor responde no WhatsApp.</p>
+      <div><a class="btn btn-dark" data-wa="Olá, CONREC! Tenho uma dúvida sobre o site." href="#"><svg><use href="#wa"/></svg>Tirar dúvida no WhatsApp</a></div>
+    </div>
+    <div class="rv">
+      <details><summary>Preciso ter domínio e hospedagem?</summary><p>Sim, todo site precisa de um endereço (domínio) e de um lugar para ficar no ar (hospedagem). Se você ainda não tem, o consultor explica as opções e os custos e ajuda a contratar. Se já tem, usamos o seu.</p></details>
+      <details><summary>Quem escreve os textos?</summary><p>Você, com a nossa ajuda. A gente te passa um roteiro simples do que colocar em cada seção, tira as dúvidas e ajusta a apresentação no site antes de publicar.</p></details>
+      <details><summary>E se eu quiser mudar algo depois?</summary><p>Os ajustes antes de publicar estão inclusos no plano. Depois que o site está no ar, alterações são combinadas com o consultor conforme o tamanho da mudança.</p></details>
+      <details><summary>Como funciona o pagamento?</summary><p>O consultor passa o valor fechado e as formas de pagamento na conversa, antes de começar. Você só fecha quando estiver tudo claro.</p></details>
+      <details><summary>Meu site vai aparecer no Google?</summary><p>O site sai com a estrutura básica que o Google precisa para entender o que você faz. No plano Profissional também cadastramos sua empresa no Perfil da Empresa no Google. Ninguém pode garantir a primeira posição, e a gente não promete isso.</p></details>
+      <details><summary>Não tenho logo nem fotos boas. Dá para fazer?</summary><p>Dá. Usamos o que você tiver e orientamos como tirar fotos boas com o celular. Se precisar de logo, o consultor explica como a CONREC pode ajudar.</p></details>
+      <details><summary>O prazo de 5 dias vale para qualquer site?</summary><p>Vale para os planos Essencial e Profissional, contando a partir do recebimento das informações e fotos. Sites sob medida, com interações, têm prazo combinado antes de começar.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final sec">
+  <div class="wrap">
+    <div class="rv">
+      <h2>Seu site no ar em até 5 dias, a partir de R$ 497.</h2>
+      <p>Chame um consultor no WhatsApp, conte sobre o seu negócio e receba o valor fechado na hora.</p>
+    </div>
+    <div class="side rv">
+      <a class="btn" data-wa="Olá, CONREC! Quero colocar meu site no ar." href="#"><svg><use href="#wa"/></svg>Falar com um consultor no WhatsApp</a>
+      <small>Atendimento de segunda a sexta, em horário comercial.</small>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="brand/conrec-logo-horizontal-negativo.svg" alt="CONREC">
+    <div class="links">
+      <a data-wa="Olá, CONREC!" href="#">WhatsApp (54) 99107-6297</a>
+      <a href="https://www.instagram.com/conrecprodutora/" target="_blank" rel="noopener">@conrecprodutora</a>
+      <span>Passo Fundo · RS</span>
+    </div>
+  </div>
+</footer>
+
+<div class="vw" id="vw" role="dialog" aria-modal="true" aria-label="Visualizar modelo">
+  <div class="vw-top">
+    <div class="vw-t"><small id="vwNiche"></small><b id="vwBrand"></b></div>
+    <div class="seg" role="group" aria-label="Dispositivo">
+      <button id="bDesk" class="on"><svg><use href="#desk"/></svg>Computador</button>
+      <button id="bMob"><svg><use href="#cel"/></svg>Celular</button>
+    </div>
+    <div class="vw-act">
+      <button class="ib" id="vPrev" aria-label="Modelo anterior"><svg><use href="#prev"/></svg></button>
+      <button class="ib" id="vNext" aria-label="Próximo modelo"><svg><use href="#next"/></svg></button>
+      <button class="ib" id="vClose" aria-label="Fechar"><svg><use href="#x"/></svg></button>
+    </div>
+    <a class="btn btn-wa" id="vCta" href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Quero um site assim<span class="long"> no WhatsApp</span></a>
+  </div>
+  <div class="vw-stage" id="stage">
+    <div class="vw-load" id="vLoad">Carregando o modelo…</div>
+    <div class="frame desk" id="frame"><div class="bar"><i></i><i></i><i></i><span id="vUrl"></span></div><iframe id="ifr" title="Modelo de site" loading="lazy"></iframe></div>
+    <p class="vw-hint" id="vHint">Role e clique à vontade: é o site funcionando.</p>
+  </div>
+</div>
+
+<a class="fab" data-wa="Olá, CONREC! Quero um site para minha empresa." href="#" aria-label="Falar com um consultor no WhatsApp"><svg><use href="#wa"/></svg>Falar com consultor</a>
+
+<script>
+(function(){
+  const WA='5554991076297';
+  const wa=m=>'https://wa.me/'+WA+'?text='+encodeURIComponent(m);
+  document.querySelectorAll('[data-wa]').forEach(a=>{a.href=wa(a.dataset.wa);a.target='_blank';a.rel='noopener'});
+
+  const M=[
+    {id:'planejados',niche:'Móveis sob medida',brand:'Vértice Planejados',url:'modelo · móveis sob medida',feat:'Configurador de cozinha'},
+    {id:'salao',niche:'Salões e barbearias',brand:'Casa Âmbar',url:'modelo · salões e barbearias',feat:'Agendamento em 1 minuto'},
+    {id:'estetica',niche:'Estética automotiva',brand:'Verniz Estúdio Automotivo',url:'modelo · estética automotiva',feat:'Montagem de pacote'},
+    {id:'oficina',niche:'Oficina mecânica',brand:'Eixo Auto Center',url:'modelo · oficina mecânica',feat:'Diagnóstico rápido'},
+    {id:'odonto',niche:'Clínica odontológica',brand:'Morada Odontologia',url:'modelo · clínica odontológica',feat:'Monte sua avaliação'}
+  ];
+  window.CONREC_MODELOS=M;
+
+  // cards
+  const g=document.getElementById('pgrid');
+  M.forEach((m,i)=>{
+    const b=document.createElement('button');b.className='pc rv'+(i<2?' big':'');b.type='button';
+    b.setAttribute('aria-label','Abrir modelo para '+m.niche);
+    b.innerHTML=(m.feat?`<span class="feat">${m.feat}</span>`:'')+
+      `<div class="shot"><div class="bar"><i></i><i></i><i></i></div><img loading="lazy" src="posters/${m.id}-d.webp" alt=""></div>`+
+      `<div class="mob"><img loading="lazy" src="posters/${m.id}-m.webp" alt=""></div>`+
+      `<div class="meta"><div><small>${m.niche}</small><b>${m.brand}</b></div><span class="go">Ver site<svg width="16" height="16"><use href="#arr"/></svg></span></div>`;
+    b.addEventListener('click',()=>open(i));g.appendChild(b);
+  });
+
+  // hero: alterna capas
+  const hd=document.getElementById('hd'),hm=document.getElementById('hm'),dots=document.getElementById('hdots');
+  const H=M.slice(0,3);H.forEach(()=>dots.appendChild(document.createElement('i')));
+  let hi=0;const showH=k=>{hi=k;[...dots.children].forEach((d,j)=>d.classList.toggle('on',j===k));hd.style.opacity=hm.style.opacity=0;setTimeout(()=>{hd.src=`posters/${H[k].id}-d.webp`;hm.src=`posters/${H[k].id}-m.webp`;hd.style.opacity=hm.style.opacity=1},350)};
+  dots.children[0].classList.add('on');
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(()=>showH((hi+1)%H.length),4200);
+
+  // header sólido
+  const top=document.getElementById('top');const onS=()=>top.classList.toggle('solid',scrollY>40);addEventListener('scroll',onS,{passive:true});onS();
+
+  // revelação
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+  // visualizador
+  const vw=document.getElementById('vw'),fr=document.getElementById('frame'),ifr=document.getElementById('ifr'),st=document.getElementById('stage'),load=document.getElementById('vLoad');
+  const bD=document.getElementById('bDesk'),bM=document.getElementById('bMob');
+  let cur=0,mode=innerWidth<760?'mob':'desk',lastFocus=null;
+  function fit(){
+    const W=mode==='desk'?1366:390+24, Hh=mode==='desk'?854+34:844+24;
+    const r=st.getBoundingClientRect();const s=Math.min((r.width-36)/W,(r.height-60)/Hh,1);
+    fr.className='frame '+mode;
+    ifr.style.width=(mode==='desk'?1366:390)+'px';ifr.style.height=(mode==='desk'?854:844)+'px';
+    fr.style.width=W+'px';fr.style.height=Hh+'px';
+    fr.style.transform=`translate(-50%,-50%) scale(${s})`;
+  }
+  function setMode(m){mode=m;bD.classList.toggle('on',m==='desk');bM.classList.toggle('on',m==='mob');fit()}
+  function load_(i){
+    cur=(i+M.length)%M.length;const m=M[cur];
+    document.getElementById('vwNiche').textContent=m.niche;document.getElementById('vwBrand').textContent=m.brand;
+    document.getElementById('vUrl').textContent=m.url||'seunegocio.com.br';
+    document.getElementById('vCta').href=wa(`Olá, CONREC! Vi o modelo de ${m.niche.toLowerCase()} e quero um site assim para o meu negócio.`);
+    load.style.opacity=1;ifr.style.opacity=0;ifr.src=`modelos/${m.id}/index.html`;
+  }
+  ifr.addEventListener('load',()=>{load.style.opacity=0;ifr.style.transition='opacity .4s';ifr.style.opacity=1});
+  function open(i){lastFocus=document.activeElement;vw.classList.add('open');document.body.style.overflow='hidden';setMode(innerWidth<760?'mob':mode);load_(i);document.getElementById('vClose').focus()}
+  function close(){vw.classList.remove('open');document.body.style.overflow='';ifr.src='about:blank';lastFocus&&lastFocus.focus()}
+  window.CONREC_ABRIR=open;
+  bD.onclick=()=>setMode('desk');bM.onclick=()=>setMode('mob');
+  document.getElementById('vPrev').onclick=()=>load_(cur-1);document.getElementById('vNext').onclick=()=>load_(cur+1);
+  document.getElementById('vClose').onclick=close;
+  addEventListener('keydown',e=>{if(!vw.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight'&&document.activeElement!==ifr)load_(cur+1);if(e.key==='ArrowLeft'&&document.activeElement!==ifr)load_(cur-1)});
+  addEventListener('resize',()=>{if(vw.classList.contains('open'))fit()});
+})();
+</script>
+</body>
+</html>
