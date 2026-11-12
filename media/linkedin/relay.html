@@ -1,0 +1,4 @@
+<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><body>ok<script>
+const u=new URLSearchParams(location.search).get('u');
+fetch(u).then(r=>r.blob()).then(b=>{(window.opener||parent).postMessage({relay:u,blob:b},'https://www.linkedin.com');document.body.textContent='enviado '+b.size})
+</script>
