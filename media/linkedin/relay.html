@@ -1,4 +1,4 @@
-<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><body>ok<script>
-const u=new URLSearchParams(location.search).get('u');
-fetch(u).then(r=>r.blob()).then(b=>{(window.opener||parent).postMessage({relay:u,blob:b},'https://www.linkedin.com');document.body.textContent='enviado '+b.size})
+<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><body>carregando<script>
+const q=new URLSearchParams(location.search);const L=q.get('all')?q.get('all').split(',').map(f=>'/media/posts/'+f):[q.get('u')];
+(async()=>{for(const u of L){const b=await (await fetch(u)).blob();(window.opener||parent).postMessage({relay:u,blob:b},'https://www.linkedin.com');document.body.textContent+=' · '+u.split('/').pop()}document.body.textContent+=' · pronto'})();
 </script>
